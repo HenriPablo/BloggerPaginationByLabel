@@ -1,3 +1,6 @@
+/*----------------------------------------------------*
+    container for the entire widget
+ *----------------------------------------------------*/
 .pagination-widget{
     font-family: sans-serif;
     font-size:98%;
@@ -12,7 +15,18 @@
     border-radius:4px;
     padding:0.25em
 }
+/*----------------------------------------------------*
+    END container for the entire widget
+ *----------------------------------------------------*/
 
+
+
+/*----------------------------------------------------*
+    container for individual post links and links
+
+        .links - wrapper
+        a.nav-spot - post link
+  *----------------------------------------------------*/
 .links{
     padding-top:0.25em
 }
@@ -44,7 +58,19 @@ a.nav-spot:hover{
     background-color: #333;
     color:#efefef;
 }
+/*---------------------------------------------------*
+    END container for individual post links and links
+ *---------------------------------------------------*/
 
+
+/*----------------------------------------------------*
+    Container for 'tool tips'
+    contents display triggered by mouse over and
+    touch events on .nav-spot
+
+        .tips - wrapper
+        .title-tip - tip contents
+  *---------------------------------------------------*/
 .tips{
     height: 2em;
     position: relative;
@@ -96,6 +122,11 @@ span.current-tip{
 .current-tip:hover{
     background-color: #ffac00;
 }
+/*----------------------------------------------------*
+    END Container for 'tool tips'  container and tips
+ *----------------------------------------------------*/
+
+
 
 @media screen and ( max-device-width: 640px ){
 
