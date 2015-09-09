@@ -16,57 +16,78 @@
 $(document).ready( function() {
 
     var pager = {
-
         creds : {
             key : "AIzaSyChPDh-rh9eJlVlYuLiDW2nvJegZksFhEw",
             blogID : "6635756895615555070"
         },
         defaults : {
             /* PROD */
-            //currentUrl :  window.location.pathname.toString()
+            currentUrl :  window.location.pathname.toString(),
 
             /* TESTING */
-            currentUrl : "http://www.disapprovingbun.com/2015/07/the-disapprovers-climbing-back.html",
+            //currentUrl : "http://www.disapprovingbun.com/2015/07/the-disapprovers-climbing-back.html",
 
             plist : [],
             linkCnt : 0,
-            //paginationWidget : $('<div id="pagination-widget" class="pagination-widget"><div class="title-bar" id="title-bar"></div></div>'),
-            //paginatorDestination : $('.post-labels'), // $('.post-body');
             currentTipClass : "current-tip",
-
-            labels : ""
-            //tips : "",
-            //links : ""
+            posts : $('.post'),                 /* we need to know if we have more that 1 post */
+            labels : $('.post-labels a')
         }
     }
 
     pager.label = (function () {
-
-            pager.defaults.labels = $('.post-labels a');
             if( pager.defaults.labels.length > 1 ){
-                alert( pager.defaults.labels.length )
-                return alert("we have more than 1 label for this post");
+                //return alert("we have more than 1 label for this post");
             } else{
                 return encodeURIComponent( pager.defaults.labels.text() );
             }
-
         })();
 
     pager.init = function(){
+        /*
+            check for labels and a single post,
+            TODO: implement multip post, multi label pager loaded only on demand
+        */
+        if( ( pager.defaults.labels.length > 0 ) && ( pager.defaults.posts.length < 2 ) ){
+            pager.getBlogPostData();
+        } else {
+            //alert('Post Has No Labels');
+            $('.post-labels a').each( function(){
+                $(this).wrap('<span class="lbl-wrapper" style="border:1px solid #efefef; background-color:#fefefe;padding:3px;border-radius:3px"></span>');
+                $(this).parent().append('<span class="paginator-trigger" style="padding:5px; border-radius:5px; background-color:#666; color:#fff">+</span>')
+                $(this).next('.paginator-trigger').click( function( e ){
+                    $('#pagination-widget').remove();
+                    alert('hello from lable: ' + $(this).prev().text() );
+                    pager.buildPaginatorContainer(  $(this) );
+                    pager.getBlogPostData( pager.getJSONQueryString( encodeURIComponent( $(this).prev().text() )));
+                });
+            });
+        }
 
+    }
+
+    pager.buildPaginatorContainer = function( attachTo ){
+        
+         var paginatorDestination = $('.post-labels');     
+        
         var paginationWidget = $('<div id="pagination-widget" class="pagination-widget"><div class="title-bar" id="title-bar"></div></div>');
-        var paginatorDestination = $('.post-labels');
+       
 
         paginationWidget.append( '<div id="tips" class="tips"></div>');
         paginationWidget.append('<div id="links" class="links"></div>');
         var tips = $('#tips');
         var links = $('#links');
-        paginationWidget.insertAfter( paginatorDestination );
-
+        
+        if( attachTo !== undefined ){
+            paginatorDestination = attachTo;
+            paginationWidget.appendTo( attachTo );
+        } else {
+           paginationWidget.insertAfter( paginatorDestination );
+        }
     }
 
     pager.getJSONQueryString = function( t ){
-        //console.dir( t );
+        alert( "t in getJSONQueryString:" + t)
         var t = (function(){
             if( t === null ){
                 return "";
@@ -75,27 +96,20 @@ $(document).ready( function() {
             }
         })();
         var tt = 'https://www.googleapis.com/blogger/v3/blogs/' + pager.creds.blogID + '/posts?fetchBodies=false&labels=' + pager.label + '&' + t + 'key=' + pager.creds.key;
-        //console.log( "tt: " + tt );
         return tt;
     },
 
-    pager.showPageLinks = function( pageLinks ){
-        pager.init();
+    pager.buildPaginatorLinksAndTips = function( pageLinks ){
+        if( $('#pagination-container').length === 0 ){
+            pager.buildPaginatorContainer();
+        }
+        
         var linkCnt = 0;
-        console.log("page links in pager.showPageLinks: ");
-        console.dir( pageLinks );
-        //console.log( "page links length: " + pageLinks.length )
-
         var tempClass = "";
         var tempRemider = "";
-        //alert( pageLinks.length );
-        console.log( "pager.defaults.tips: " + $(pager.defaults.tips).length );
-        console.log( "pager.defaults.links: " + $(pager.defaults.links).length );
         pageLinks.reverse();
         $( pageLinks ).each( function( idx){
             linkCnt = linkCnt + 1;
-
-            //console.log( "this.url: " + this.url );
 
             if( this.url.indexOf( pager.defaults.currentUrl) > -1 ){
                 tempClass  =  " " + pager.defaults.currentTipClass;
@@ -114,13 +128,10 @@ $(document).ready( function() {
 
         $('a.nav-spot').on({
             'touchstart': function( e ){
-                console.log(e.timeStamp)
                 e.stopPropagation();
                 e.preventDefault();
                 touchDev = true;
-                console.log('touchDev: ' + touchDev );
                 if(!$(this).hasClass('touched')){
-                    //$('.title-tip.current-tip').hide();
                     $('.title-tip').hide().removeClass('current-tip');
                     $( 'span[data-tip-id="' + $(this).attr('data-link-id') + '"]' ).fadeIn( 150).addClass('current-tip');
                     $('a.nav-spot').removeClass('touched');
@@ -128,32 +139,25 @@ $(document).ready( function() {
                     touched = true;
                     return false;
                 } else {
-                    //console.log( 'if - hasClass touched: going to a different page')
                     window.location = $(this).attr('href');
-                    //return false;
                 }
             },
             'touchend' : function( e ){
                 e.stopPropagation();
                 e.preventDefault();
-                //console.log( 'touch end fired ')
             },
             'click' : function( e ){
                 e.stopPropagation();
                 e.preventDefault();
-                //console.log( 'clicked')
                 window.location = $(this).attr('href');
             },
             'mouseenter' : function(){
-                //console.log( 'mouse entered')
                 touchDev = false;
                 $('.title-tip.current-tip').hide();
                 $( 'span[data-tip-id="' + $(this).attr('data-link-id') + '"]' ).fadeIn( 150 );
             },
             'mouseleave' : function(){
-                //console.log( 'mouse left')
                 touchDev = false;
-
                 if( $(this).hasClass( pager.defaults.currentTipClass )){
                     $('span.current-tip').show();
                 } else {
@@ -163,31 +167,25 @@ $(document).ready( function() {
             }
         });
     },
-    pager.getPLIst = function( t ){
+    pager.getBlogPostData = function( t ){
         var t = t || null;
-        console.dir( t )
         $.ajax({
 
             url: pager.getJSONQueryString( t ),
             type: 'get',
             dataType: "jsonp",
             success: function (data) {
-                var tempClass = ""
-
                 for( var i = 0; i < data.items.length; i++){
-                    pager.defaults.linkCnt = pager.defaults.linkCnt + 1;
                     pager.defaults.plist.push( data.items[i] );
                 }
 
                 if( data.hasOwnProperty('nextPageToken') ){
-                    pager.getPLIst( data.nextPageToken );
+                    pager.getBlogPostData( data.nextPageToken );
                 } else {
-                    console.log( "sending pager.defaults.plist: ")
-                    console.dir( pager.defaults.plist );
-                    pager.showPageLinks( pager.defaults.plist );
+                    pager.buildPaginatorLinksAndTips( pager.defaults.plist );
                 }
             }
         });
     }
-        pager.getPLIst();
+        pager.init();
 });

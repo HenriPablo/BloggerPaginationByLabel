@@ -1,7 +1,10 @@
     <style type="text/css">
+        /*----------------------------------------------------*
+            container for the entire widget
+         *----------------------------------------------------*/
         .pagination-widget{
             font-family: sans-serif;
-            font-size:100%;
+            font-size:98%;
             text-align: center;
             overflow: visible;
             display: block;
@@ -9,19 +12,43 @@
             margin-left:auto;
             margin-right:auto;
             position:relative;
+            background-color:#666;
+            border-radius:4px;
+            padding:0.25em
         }
-        .nav-spot{
+        /*----------------------------------------------------*
+            END container for the entire widget
+         *----------------------------------------------------*/
+
+
+
+        /*----------------------------------------------------*
+            container for individual post links and links
+
+                .links - wrapper
+                a.nav-spot - post link
+          *----------------------------------------------------*/
+        .links{
+            padding-top:0.25em
+        }
+
+        a.nav-spot{
             padding:0.25em;
-            border: 1px solid #999;
-            border-radius:2px;
+            /*     border: 1px solid #999; */
+            border-radius:50px;
+            border-width: 0;
             text-align: center;
             display: inline-block;
-            background-color: #ccc;
+            background-color: #efefef;
             margin:0.25em;
             width:auto;
-            min-width:1.25em;
+            height: 12px;
+            min-width:10px;
             cursor:pointer;
             position: relative;
+            padding:1px 4px 5px 4px;
+            color:#333;
+            text-decoration: none;
         }
         a.nav-spot,
         a.nav-spot:link
@@ -29,20 +56,35 @@
         {
             color: #97000e;
         }
-        .nav-spot:hover{
+        a.nav-spot:hover{
             background-color: #333;
-        }
-        .nav-spot:hover{
             color:#efefef;
         }
-        .nav-spot{
-            color:#333;
-            text-decoration: none;
+        /*---------------------------------------------------*
+            END container for individual post links and links
+         *---------------------------------------------------*/
+
+
+        /*----------------------------------------------------*
+            Container for 'tool tips'
+            contents display triggered by mouse over and
+            touch events on .nav-spot
+
+                .tips - wrapper
+                .title-tip - tip contents
+          *---------------------------------------------------*/
+        .tips{
+            height: 2em;
+            position: relative;
+            border-bottom:1px solid #999;
+            padding-top:0.25em
         }
         .title-tip{
             display:none;
             /*background-color: #d1ac36;*/
-            border-radius: 4px;
+            border-radius: 2px;
+            border-bottom-right-radius:0;
+            border-bottom-left-radius:0;
             position: absolute;
             top:0;
             bottom:0;
@@ -54,29 +96,39 @@
             z-index: 1000;
             clear:both;
             width:100%;
+            color:#fff;
         }
 
-        .tips{
-            height: 2em;
-            position: relative;
-        }
-        .links{}
-        .nav-spot:hover .title-tip{
-            display:block;
-            margin-top:-3px;
-            margin-left:-3px;
-        }
         .current-tip{
-            background-color: #ffe9b2;
+            background-color: transparent;
             border-color: #97000e;
             display: inline-block;
         }
+
+        a.current-tip{
+            background-color: #333;
+            border-color: #000;
+            display: inline-block;
+            color:#fff;
+            font-weight: bold;
+        }
+
         .current-tip{
             color: #97000e;
+            color:#fff;
         }
+        span.current-tip{
+            color:#fff;
+        }
+
         .current-tip:hover{
             background-color: #ffac00;
         }
+        /*----------------------------------------------------*
+            END Container for 'tool tips'  container and tips
+         *----------------------------------------------------*/
+
+
 
         @media screen and ( max-device-width: 640px ){
 
@@ -107,177 +159,3 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 
-    <script type="text/javascript">
-        /*
-            TODO: implement dynamic loading of scripts if we have a disapprovers story
-
-            // from: http://www.html5rocks.com/en/tutorials/speed/script-loading/
-             [
-             '//other-domain.com/1.js',
-             '2.js'
-             ].forEach(function(src) {
-             var script = document.createElement('script');
-             script.src = src;
-             script.async = false;
-             document.head.appendChild(script);
-             });
-        */
-
-        $(document).ready( function() {
-            /* PRODUCTION */
-            var currentUrl = window.location.pathname.toString();
-            //console.dir( window.location );
-
-            /* DEV */
-            //var currentUrl = "http://www.disapprovingbun.com/2015/07/the-disapprovers-climbing-back.html";
-
-            //console.log( currentUrl );
-            if( currentUrl.indexOf('disapprovers') > -1 ){
-                //console.log('we have disapprovers');
-                //console.log( currentUrl );
-                var key = "replace-with-production-key";
-                var blogId = "replace-with-production-blog-id";
-
-            var plist = [];
-            var linkCnt = 0;
-
-            var paginationWidget = $('<div id="pagination-widget" class="pagination-widget"><div class="title-bar" id="title-bar"></div></div>');
-            var bod = $('.post-body');
-
-            //var url = "http://www.disapprovingbun.com/2015/07/the-disapprovers-climbing-back.html";
-            var currentTipClass = "current-tip"
-
-            paginationWidget.appendTo( bod );
-            paginationWidget.append( '<div id="tips" class="tips"></div>');
-            paginationWidget.append('<div id="links" class="links"></div>');
-
-            var tips = $('#tips');
-            var links = $('#links');
-
-            function showPageLinks( pageLinks ){
-                var linkCnt = 0;
-                //console.dir( pageLinks );
-                //console.log( "page links length: " + pageLinks.length )
-
-                var tempClass = "";
-                var tempRemider = "";
-                //alert( pageLinks.length );
-                pageLinks.reverse();
-                $( pageLinks ).each( function( idx){
-                    linkCnt = linkCnt + 1;
-
-                    //console.log( "this.url: " + this.url );
-
-                    if( this.url.indexOf( currentUrl ) > -1 ){
-                        tempClass  =  " " + currentTipClass;
-                        tempRemider = "You are currently viewing episode &nbsp;&nbsp;&nbsp;";
-                    } else {
-                        tempClass = "";
-                        tempRemider = "";
-                    }
-
-                    tips.append( '<span class="title-tip ' + tempClass + '" data-tip-id="' + linkCnt + '">'  + tempRemider + "<strong>" + this.title + '</strong>' + '&nbsp;&nbsp;&nbsp; published on ' + new Date(this.published).toLocaleDateString() + '</span>' )
-                    links.append( $('<a class="nav-spot'+ tempClass  + '" data-link-id="' + linkCnt + '" href="' + this.url  + '" >' + ( linkCnt) +'</a>'));
-                });
-
-
-                var touchDev = false;
-                var touched = false;
-
-                $('a.nav-spot').on({
-                    'touchstart': function( e ){
-                        console.log(e.timeStamp)
-                        e.stopPropagation();
-                        e.preventDefault();
-                        touchDev = true;
-                        console.log('touchDev: ' + touchDev );
-                        if(!$(this).hasClass('touched')){
-                            //$('.title-tip.current-tip').hide();
-                            $('.title-tip').hide().removeClass('current-tip');
-                            $( 'span[data-tip-id="' + $(this).attr('data-link-id') + '"]' ).fadeIn( 150).addClass('current-tip');
-                            $('a.nav-spot').removeClass('touched');
-                            $(this).addClass('touched')
-                            touched = true;
-                            return false;
-                        } else{
-                            //console.log( 'if - hasClass touched: going to a different page')
-                            window.location = $(this).attr('href');
-                            //return false;
-                        }
-                    },
-                    'touchend' : function( e ){
-                        e.stopPropagation();
-                        e.preventDefault();
-                        //console.log( 'touch end fired ')
-                    },
-                    'click' : function( e ){
-                        e.stopPropagation();
-                        e.preventDefault();
-                        //console.log( 'clicked')
-                        window.location = $(this).attr('href');
-                    },
-                     'mouseenter' : function(){
-                         //console.log( 'mouse entered')
-                         touchDev = false;
-                         $('.title-tip.current-tip').hide();
-                         $( 'span[data-tip-id="' + $(this).attr('data-link-id') + '"]').fadeIn( 150 );
-                     },
-                     'mouseleave' : function(){
-                         //console.log( 'mouse left')
-                         touchDev = false;
-
-                         if( $(this).hasClass( currentTipClass )){
-                             $('span.current-tip').show();
-                         } else {
-                             $( 'span[data-tip-id="' + $(this).attr('data-link-id') + '"]' ).fadeOut( 150 );
-                             $('.title-tip.current-tip').show();
-                         }
-                     }
-
-                });
-
-
-
-            }
-
-            function getJSONQueryString( t ){
-                //console.dir( t );
-                var t = (function(){
-                            if( t === null ){
-                                return "";
-                            } else {
-                                return ( "pageToken="  + t + "&" )
-                            }
-                        })();
-                var tt = 'https://www.googleapis.com/blogger/v3/blogs/' + blogId + '/posts?fetchBodies=false&labels=The+Disapprovers&' + t + 'key=' + key;
-                return tt;
-            }
-
-            function getPList( t ){
-                var t = t || null;
-                $.ajax({
-
-                    url: getJSONQueryString( t ),
-                    type: 'get',
-                    dataType: "jsonp",
-                    success: function (data) {
-                        var tempClass = ""
-
-                        for( var i = 0; i < data.items.length; i++){
-                            linkCnt = linkCnt + 1;
-                            plist.push( data.items[i] );
-                        }
-
-                        if( data.hasOwnProperty('nextPageToken') ){
-                            getPList( data.nextPageToken );
-                        } else {
-                            showPageLinks( plist );
-                        }
-                    }
-                });
-            }
-
-            getPList();
-        }
-        });
-    </script>
