@@ -57,9 +57,10 @@ $(document).ready( function() {
                 $(this).parent().append('<span class="paginator-trigger" style="padding:5px; border-radius:5px; background-color:#666; color:#fff">+</span>')
                 $(this).next('.paginator-trigger').click( function( e ){
                     $('#pagination-widget').remove();
-                    alert('hello from lable: ' + $(this).prev().text() );
+                    pager.defaults.labels = $(this).prev().text();
+                    //alert('hello from lable: ' + $(this).prev().text() );
                     pager.buildPaginatorContainer(  $(this) );
-                    pager.getBlogPostData( pager.getJSONQueryString( encodeURIComponent( $(this).prev().text() )));
+                    pager.getBlogPostData( /*pager.getJSONQueryString( encodeURIComponent( $(this).prev().text() ))*/);
                 });
             });
         }
@@ -87,7 +88,7 @@ $(document).ready( function() {
     }
 
     pager.getJSONQueryString = function( t ){
-        alert( "t in getJSONQueryString:" + t)
+        alert( "incoming next page token in getJSONQueryString: " + t)
         var t = (function(){
             if( t === null ){
                 return "";
@@ -95,6 +96,7 @@ $(document).ready( function() {
                 return ( "pageToken="  + t + "&" )
             }
         })();
+        alert( "deduced next page token to: " + t )
         var tt = 'https://www.googleapis.com/blogger/v3/blogs/' + pager.creds.blogID + '/posts?fetchBodies=false&labels=' + pager.label + '&' + t + 'key=' + pager.creds.key;
         return tt;
     },
