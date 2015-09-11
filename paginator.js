@@ -59,12 +59,11 @@ $(document).ready( function() {
                     $('#pagination-widget').remove();
                     pager.defaults.labels = $(this).prev().text();
                     //alert('hello from lable: ' + $(this).prev().text() );
-                    pager.buildPaginatorContainer(  $(this) );
+                    pager.buildPaginatorContainer(  $(this).parent() );
                     pager.getBlogPostData( /*pager.getJSONQueryString( encodeURIComponent( $(this).prev().text() ))*/);
                 });
             });
         }
-
     }
 
     pager.buildPaginatorContainer = function( attachTo ){
