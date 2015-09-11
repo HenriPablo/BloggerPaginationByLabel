@@ -31,15 +31,19 @@ $(document).ready( function() {
             linkCnt : 0,
             currentTipClass : "current-tip",
             posts : $('.post'),                 /* we need to know if we have more that 1 post */
-            labels : $('.post-labels a')
+            labels : $('.post-labels a'),
+            label : "",
+            paginatorContainer : $('.post-labels')
         }
     }
 
     pager.label = (function () {
+            console.dir( pager.defaults.labels );
             if( pager.defaults.labels.length > 1 ){
-                //return alert("we have more than 1 label for this post");
+                return console.log("we have more than 1 label for this post:" + pager.defaults.labels.length );
             } else{
-                return encodeURIComponent( pager.defaults.labels.text() );
+                pager.defaults.label = encodeURIComponent( pager.defaults.labels.text() );
+                return pager.defaults.label;
             }
         })();
 
@@ -48,6 +52,8 @@ $(document).ready( function() {
             check for labels and a single post,
             TODO: implement multip post, multi label pager loaded only on demand
         */
+
+
         if( ( pager.defaults.labels.length > 0 ) && ( pager.defaults.posts.length < 2 ) ){
             pager.getBlogPostData();
         } else {
@@ -56,47 +62,45 @@ $(document).ready( function() {
                 $(this).wrap('<span class="lbl-wrapper" style="border:1px solid #efefef; background-color:#fefefe;padding:3px;border-radius:3px"></span>');
                 $(this).parent().append('<span class="paginator-trigger" style="padding:5px; border-radius:5px; background-color:#666; color:#fff">+</span>')
                 $(this).next('.paginator-trigger').click( function( e ){
-                    $('#pagination-widget').remove();
+                    $('.pagination-widget').remove();
+                    pager.defaults.plist = [];
+                    pager.defaults.paginatorContainer = $(this).parent();
                     pager.defaults.labels = $(this).prev().text();
+                    pager.defaults.label = $(this).prev().text();
                     //alert('hello from lable: ' + $(this).prev().text() );
-                    pager.buildPaginatorContainer(  $(this).parent() );
+                    //pager.buildPaginatorContainer( );
                     pager.getBlogPostData( /*pager.getJSONQueryString( encodeURIComponent( $(this).prev().text() ))*/);
                 });
             });
         }
     }
 
-    pager.buildPaginatorContainer = function( attachTo ){
+    pager.buildPaginatorContainer = function(  ){
         
-         var paginatorDestination = $('.post-labels');     
+        var paginatorDestination = pager.defaults.paginatorContainer; //$('.post-labels');
         
-        var paginationWidget = $('<div id="pagination-widget" class="pagination-widget"><div class="title-bar" id="title-bar"></div></div>');
-       
+        var paginationWidget = $('<div class="pagination-widget"><div class="title-bar" id="title-bar"></div></div>');
 
         paginationWidget.append( '<div id="tips" class="tips"></div>');
         paginationWidget.append('<div id="links" class="links"></div>');
         var tips = $('#tips');
         var links = $('#links');
-        
-        if( attachTo !== undefined ){
-            paginatorDestination = attachTo;
-            paginationWidget.appendTo( attachTo );
-        } else {
-           paginationWidget.insertAfter( paginatorDestination );
-        }
+
+        paginationWidget.insertAfter( paginatorDestination );
     }
 
     pager.getJSONQueryString = function( t ){
         alert( "incoming next page token in getJSONQueryString: " + t)
         var t = (function(){
-            if( t === null ){
+            if( (t === null) || ( typeof t === undefined) ){
+                console.log( 't check for null undefined: ' + t );
                 return "";
             } else {
                 return ( "pageToken="  + t + "&" )
             }
         })();
         alert( "deduced next page token to: " + t )
-        var tt = 'https://www.googleapis.com/blogger/v3/blogs/' + pager.creds.blogID + '/posts?fetchBodies=false&labels=' + pager.label + '&' + t + 'key=' + pager.creds.key;
+        var tt = 'https://www.googleapis.com/blogger/v3/blogs/' + pager.creds.blogID + '/posts?fetchBodies=false&labels=' + pager.defaults.label + '&' + t + 'key=' + pager.creds.key;
         return tt;
     },
 
@@ -169,6 +173,7 @@ $(document).ready( function() {
         });
     },
     pager.getBlogPostData = function( t ){
+        console.log( "t in getBlogPostData: " + t );
         var t = t || null;
         $.ajax({
 
