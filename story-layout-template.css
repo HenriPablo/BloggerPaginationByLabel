@@ -1,3 +1,6 @@
+/*--------------------------------------------------------------*
+    START DISAPPROVERS EPISODE STYLE
+ *--------------------------------------------------------------*/
 @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
 
 div.story-row > *
@@ -97,6 +100,7 @@ div.story-footer{
     font-weight: bold;
     font-style: oblique;
 }
+
 div.story-footer a{
     font-weight: normal;
     
@@ -105,4 +109,7 @@ div.story-footer a{
     display: inline-block;
     font-style: normal;
 }
+/*--------------------------------------------------------------*
+    END DISAPPROVERS EPISODE STYLE
+ *--------------------------------------------------------------*/
 
