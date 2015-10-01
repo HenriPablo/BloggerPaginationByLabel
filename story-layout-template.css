@@ -23,8 +23,7 @@ div.story-row.story-header div.story-pix a
     text-align: center;
     float: none!important;
     width:100%!important;
-    background-color:yellow;
-        line-height: 0;
+    line-height: 0;
     font-size: 0;
 }
 
@@ -64,13 +63,12 @@ div.story-row.story-header div.story-txt:first-letter
     float: left;
     margin: 0;
     padding: 0 0.0em 0 0;
-    line-height: 0;
 }
 
 div.story-txt{
     float: right;
     width:80%;
-    padding:0 3.5em 3.5em 3.5em;
+    padding:0 3.5em 1.75em 3.5em;
     color:#333!important;
 }
 
@@ -109,7 +107,20 @@ div.story-footer a{
     display: inline-block;
     font-style: normal;
 }
+
+
+@media screen and ( max-device-width: 640px ){
+    div.story-row div.story-txt{
+        font-size: 2em;
+        line-height: 1.5em;
+        padding: 0 1em 1.5em 1em;
+    }
+
+    div.story-row.story-header > div.story-txt{
+        font-size: 1.95em;
+        line-height: 1.75em;
+    }
+}
 /*--------------------------------------------------------------*
     END DISAPPROVERS EPISODE STYLE
  *--------------------------------------------------------------*/
-
