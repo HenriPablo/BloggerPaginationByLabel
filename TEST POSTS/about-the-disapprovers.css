@@ -1,0 +1,30 @@
+ @import url(https://fonts.googleapis.com/css?family=Viga|Pragati+Narrow:700);
+
+/* MAIN NAV */
+ul.disapprovers-menu
+{
+    background-color: rgba(0,0,0, 0.8);
+    text-align: center;
+    margin:0;
+    padding:0;
+    display: block;
+    clear:both;
+}
+
+
+ul.disapprovers-menu li
+{
+    list-style: none;
+    display: inline-block;
+    margin:0 1em;
+}
+
+ul.disapprovers-menu li a
+{
+    font-family: 'Viga', sans-serif;
+    display: inline-block;
+    padding: 0.5em;
+    font-size:18px;
+    line-height: 24px;
+}
+/* END MAIN NAV */
