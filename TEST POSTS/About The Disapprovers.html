@@ -1,114 +1,250 @@
-<div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.smartmenus/1.0.0/jquery.smartmenus.min.js" type="text/javascript"></script>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.smartmenus/1.0.0/css/sm-core-css.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.smartmenus/1.0.0/css/sm-clean/sm-clean.min.css" rel="stylesheet" />
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Viga|Pragati+Narrow:700);
+    /* override blogger defaults */
+    .header-outer
+    {
+        display: none;
+    }
+    h3.post-title.entry-title{
+        display:none;
+    }
+    .main-inner{
+        padding-top:0!important;
+    }
+
+    .post-body img, .post-body .tr-caption-container{
+        padding: 0!important;
+    }
+    .post-header{
+        display: none;
+    }
+    .tabs-outer
+    {
+        display:none;
+    }
+    /* end override blogger defaults */
+
+
+    h1, h3
+    {
+        font-family: 'Viga', sans-serif;
+        /*font-family: 'Pragati Narrow', sans-serif;*/
+        font-weight: normal;
+    }
+
+
+    .about-the-disapprovers
+    {
+        width:100%;
+        max-width:1024px;
+        overflow: hidden;
+        margin:0 auto;
+        padding-top:2em;
+    }
+    .story-pix.header{
+        background: transparent url('http://2.bp.blogspot.com/-kO9NcPgncpQ/VlmZqUmzGnI/AAAAAAAAEPw/v2vyNWy89qE/s1600/The-Antennae-hs-2006-46-a-xlarge_web.jpeg') 50% 50% no-repeat;
+        color:#fff;
+        overflow: hidden;
+        line-height: 0;
+        font-size: 0;
+        text-align: center;
+        padding-top:125px;
+
+    }
+    .story-pix.header h1{
+        color:#fff;
+        /*border-top:1px solid #fff;*/
+        text-align: center;
+        padding: 0.5em 0 0.5em 0;
+        font-size:48px!important;
+        line-height: 1.25em;
+        background-color: rgba(0,0,0, 0.7 );
+        margin: 0;
+    }
+    .critter-outlines{
+        width: 100%;
+        max-width:1024px;
+        height: auto;
+        display: inline-block;
+        background-color: transparent!important;
+        border:none!important;
+        margin:0!important;
+        padding-bottom: 0!important;
+        box-shadow: none!important;
+    }
+
+    .gradient-line{
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#02008e+0,ffffff+50,02008e+100&amp;0.7+0,0.7+100 */
+        background: -moz-linear-gradient(left,  rgba(2,0,142,0.7) 0%, rgba(255,255,255,0.7) 50%, rgba(2,0,142,0.7) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  rgba(2,0,142,0.7) 0%,rgba(255,255,255,0.7) 50%,rgba(2,0,142,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  rgba(2,0,142,0.7) 0%,rgba(255,255,255,0.7) 50%,rgba(2,0,142,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b302008e', endColorstr='#b302008e',GradientType=1 ); /* IE6-9 */
+
+        height: 1px;
+    }
+
+</style>
+
+<div class="about-the-disapprovers">
     <div class="story-row story-header">
 
-        <div class="story-pix">
+        <div class="story-pix header">
+            <img class="critter-outlines" src="http://2.bp.blogspot.com/-shWmHQWikE4/VlsXR0HXR6I/AAAAAAAAEQY/1npAmEdVMgY/s1600/about-the-disapprovers-header-OUTLINES-ONLY.png"/>
+            <div class="gradient-line"></div>
+            <h1>The Disapprovers</h1>
         </div>
+        <ul class="disapprovers-menu  sm sm-clean" id="disapprovers-menu">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Cast Members</a></li>
+            <li><a href="#">Hoomins</a></li>
+            <li><a href="#">Episodes</a>
+                <ul>
+                    <li><a href="#">Episode 1</a></li>
+                    <li><a href="#">Episode 2</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Home</a></li>
+        </ul>
+        <script type="text/javascript">
+            $(document).ready( function(){
+                $('#disapprovers-menu').smartmenus();
+            })
+        </script>
 
         <div class="story-txt">
         </div>
 
+    </div>
+
+    <div class="story-row">
+        <div class="story-pix">
+            <a href="http://4.bp.blogspot.com/--7Fnusj78tg/Vg5g2ee2dcI/AAAAAAAAD0c/h85aEdLkJjE/s1600/suzy-and-molly-in-bunndo_1.jpg" imageanchor="1"><img border="0" src="http://4.bp.blogspot.com/--7Fnusj78tg/Vg5g2ee2dcI/AAAAAAAAD0c/h85aEdLkJjE/s200/suzy-and-molly-in-bunndo_1.jpg"></a>
+        </div>
+        <div class="story-txt">
+        <h3>Molly</h3>
+        </div>
+    </div>
+
+
+    <div class="story-row">
+        <div class="story-pix">
+            <a href="http://4.bp.blogspot.com/-MIs7vARdVYQ/VjtGJGCYHtI/AAAAAAAAEE4/N7WQjpUDDyg/s1600/suzy-close-uup.jpg" imageanchor="1"><img border="0" src="http://4.bp.blogspot.com/-MIs7vARdVYQ/VjtGJGCYHtI/AAAAAAAAEE4/N7WQjpUDDyg/s200/suzy-close-uup.jpg"></a>
+        </div>
+        <div class="story-txt">
+            <h3>Suzy</h3>
+        </div>
+    </div>
+
+    <div class="story-row">
+        <div class="story-pix">
+            <a href="http://1.bp.blogspot.com/-QHXYF7PFveY/VhkNdSpg-dI/AAAAAAAAD24/C6GfWan6Nnk/s1600/bruno-looking-stern_1.jpg" imageanchor="1"><img border="0" src="http://1.bp.blogspot.com/-QHXYF7PFveY/VhkNdSpg-dI/AAAAAAAAD24/C6GfWan6Nnk/s200/bruno-looking-stern_1.jpg"></a>
+        </div>
+        <div class="story-txt">
+            <h3>Bruno</h3>
+        </div>
+    </div>
+
+
+    <div class="story-row">
+        <div class="story-pix">
+            <a href="http://1.bp.blogspot.com/-rJ5RMJeXHeI/VkXLMtwR3PI/AAAAAAAAEH4/IYN7sb8x-1g/s1600/mr-toes-face-close-up.jpg" imageanchor="1"><img border="0" src="http://1.bp.blogspot.com/-rJ5RMJeXHeI/VkXLMtwR3PI/AAAAAAAAEH4/IYN7sb8x-1g/s200/mr-toes-face-close-up.jpg"></a>
+        </div>
+
+        <div class="story-txt">
+            <h3>Mr. Toes</h3>
+        </div>
     </div>
 
 
     <div class="story-row">
 
         <div class="story-pix">
+            <a href="http://1.bp.blogspot.com/-zBwaHqFa3e0/VjtF8F283bI/AAAAAAAAEEI/uToF7pVK4PY/s1600/abby-noming-hay.jpg" imageanchor="1"><img border="0" src="http://1.bp.blogspot.com/-zBwaHqFa3e0/VjtF8F283bI/AAAAAAAAEEI/uToF7pVK4PY/s200/abby-noming-hay.jpg"></a>
         </div>
 
         <div class="story-txt">
+            <h3>Abby</h3>
         </div>
-
-        <div class="story-txt">
-        </div>
-
-        <div class="story-txt">
-        </div>
-
-        <div class="story-txt">
-        </div>
-
     </div>
 
 
     <div class="story-row">
+        <div class="story-pix">
+            <a href="http://2.bp.blogspot.com/-M81n3uUdQRY/VjNPyzB_XDI/AAAAAAAAEB8/dSc275j8rPw/s1600/zeus.jpg" imageanchor="1"><img border="0" src="http://2.bp.blogspot.com/-M81n3uUdQRY/VjNPyzB_XDI/AAAAAAAAEB8/dSc275j8rPw/s200/zeus.jpg"></a>
+        </div>
 
+        <div class="story-txt">
+            <h3>Zeus</h3>
+        </div>
+    </div>
+
+    <div class="story-row">
+        <div class="story-pix">
+            <a href="http://2.bp.blogspot.com/-xGQ9Mxo-gZs/VjNPyLNFfjI/AAAAAAAAEBo/rhqSrLnddp8/s1600/mila.jpg" imageanchor="1"><img border="0" src="http://2.bp.blogspot.com/-xGQ9Mxo-gZs/VjNPyLNFfjI/AAAAAAAAEBo/rhqSrLnddp8/s200/mila.jpg"></a>
+        </div>
+
+        <div class="story-txt">
+            <h3>Mila</h3>
+        </div>
+    </div>
+
+    <div class="story-row">
         <div class="story-pix">
         </div>
-
         <div class="story-txt">
+            <h3>Frankie</h3>
         </div>
-
-        <div class="story-txt">
-        </div>
-
-        <div class="story-txt">
-        </div>
-
-        <div class="story-txt">
-        </div>
-
     </div>
 
 
     <div class="story-row">
-
         <div class="story-pix">
         </div>
-
         <div class="story-txt">
+            <h3>Freddie</h3>
         </div>
-
-        <div class="story-txt">
-        </div>
-
-        <div class="story-txt">
-        </div>
-
-        <div class="story-txt">
-        </div>
-
     </div>
-
 
     <div class="story-row">
-
         <div class="story-pix">
         </div>
-
         <div class="story-txt">
+            <h3>Izzie</h3>
         </div>
-
-        <div class="story-txt">
-        </div>
-
-        <div class="story-txt">
-        </div>
-
-        <div class="story-txt">
-        </div>
-
     </div>
-
 
     <div class="story-row">
-
         <div class="story-pix">
         </div>
-
         <div class="story-txt">
+            <h3></h3>
         </div>
-
-        <div class="story-txt">
-        </div>
-
-        <div class="story-txt">
-        </div>
-
-        <div class="story-txt">
-        </div>
-
     </div>
 
+    <h4>Past Members</h4>
+
+    <div class="story-row">
+        <div class="story-pix">
+            <a href="http://4.bp.blogspot.com/-KlnYunJml-s/VkXJpi2_bSI/AAAAAAAAEHc/hBtbfouQIvc/s1600/apollo.jpg" imageanchor="1"><img border="0" src="http://4.bp.blogspot.com/-KlnYunJml-s/VkXJpi2_bSI/AAAAAAAAEHc/hBtbfouQIvc/s1600/apollo.jpg"></a>
+        </div>
+
+        <div class="story-txt">
+            <h3>Apollo</h3>
+        </div>
+    </div>
+
+    <div class="story-row">
+        <div class="story-pix">
+            <a href="http://1.bp.blogspot.com/-9vSwWK_LYCg/VXRgFicfGuI/AAAAAAAACrE/VbC4kiYaNCs/s1600/binky-free-cleo_1.jpg" imageanchor="1" ><img border="0" src="http://1.bp.blogspot.com/-9vSwWK_LYCg/VXRgFicfGuI/AAAAAAAACrE/VbC4kiYaNCs/s200/binky-free-cleo_1.jpg" /></a>
+        </div>
+        <div class="story-txt">
+            <h3>Cleo</h3>
+        </div>
+    </div>
 
     <div class="story-footer">
         - Thank you Renee!
@@ -117,4 +253,7 @@
             Frankie, Freddie, Mila and Zeus on FB</a>
     </div>
 
+    <p>
+        Image Credit: <a href="http://hubblesite.org/gallery/album/heritage/pr2006046a/large_web/">Hubble Site,  The Antennae Galaxies/NGC 4038-4039</a>
+    </p>
 </div>
