@@ -104,34 +104,31 @@
             <div class="horizontal-line-blend"></div>
 
             <ul class="disapprovers-menu" id="disapprovers-menu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#cast-members">Cast Members</a></li>
-                <li><a href="#hoomins">Hoomins</a></li>
-                <li><a href="#episodes">Episodes</a></li>
+                <li><a href="#about" class="trigger ative-trigger">About</a></li>
+                <li><a href="#cast-members" class="trigger">Cast Members</a></li>
+                <li><a href="#hoomins" class="trigger">Hoomins</a></li>
+                <li><a href="#episodes" class="trigger">Episodes</a></li>
                 <li><a href="../">Home</a></li>
             </ul>
         </div>
 
         <script type="text/javascript">
             $(document).ready( function(){
-                $('#disapprovers-menu').smartmenus();
+                $('#disapprovers-menu li a.trigger').click( function(){
+                    var activeSection = $(  $(this).attr('href'));
+                    $('section').not( activeSection).hide();
+                    activeSection.show();
+                });
             })
         </script>
 
-        <div class="story-txt">
-        </div>
-
-    </div>
-
-    <section id="about">
-        <div class="story-row">
-
-            <div class="story-pix">
-               <p>
-                   Story line came to life sometime on a Saturday in May of 2015.
-                   It's hard to tell which Saturday exactly. Saturday posts became a series of photo captions of Renee's
-                   critters. Bunnies, cat, ratties and even a hamster.
-               </p>
+        <section id="about" class="active-section">
+            <div class="story-txt">
+                <p>
+                    Story line came to life sometime on a Saturday in May of 2015.
+                    It's hard to tell which Saturday exactly. Saturday posts became a series of photo captions of Renee's
+                    critters. Bunnies, cat, ratties and even a hamster.
+                </p>
                 <p>
                     From photo to photo the little ones became more and more adventurous. They started plotting before we realized it.
                 </p>
@@ -140,8 +137,10 @@
                 </p>
 
             </div>
-        </div>
-    </section>
+        </section>
+
+    </div>
+
 
     <section id="cast-members">
         <div class="story-row">

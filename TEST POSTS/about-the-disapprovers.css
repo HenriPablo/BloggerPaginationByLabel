@@ -21,10 +21,15 @@ ul.disapprovers-menu li
 
 ul.disapprovers-menu li a
 {
-    font-family: 'Viga', sans-serif;
+    font-family: 'Viga', sans-serif!important;
     display: inline-block;
-    padding: 0.5em;
-    font-size:18px;
-    line-height: 24px;
+    padding: 0.5em!important;
+    font-size:18px!important;
+    line-height: 24px!important;
+}
+
+.active-trigger{}
+.active-section{
+
 }
 /* END MAIN NAV */
