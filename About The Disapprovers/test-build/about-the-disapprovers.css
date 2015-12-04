@@ -1,0 +1,119 @@
+ @import url(https://fonts.googleapis.com/css?family=Viga|Pragati+Narrow:700);
+
+ /* override blogger defaults */
+ .header-outer
+ {
+     display: none;
+ }
+ h3.post-title.entry-title{
+     display:none;
+ }
+ .main-inner{
+     padding-top:0!important;
+ }
+
+ .post-body img, .post-body .tr-caption-container{
+     padding: 0!important;
+ }
+ .post-header{
+     display: none;
+ }
+ .tabs-outer
+ {
+     display:none;
+ }
+ /* end override blogger defaults */
+
+
+ .about-the-disapprovers h1, .about-the-disapprovers h3
+ {
+     font-family: 'Viga', sans-serif;
+     /*font-family: 'Pragati Narrow', sans-serif;*/
+     font-weight: normal;
+ }
+
+
+ .about-the-disapprovers
+ {
+     width:100%;
+     max-width:1024px;
+     overflow: hidden;
+     margin:0 auto;
+     padding-top:2em;
+ }
+ .story-pix.header{
+     background: transparent url('http://2.bp.blogspot.com/-kO9NcPgncpQ/VlmZqUmzGnI/AAAAAAAAEPw/v2vyNWy89qE/s1600/The-Antennae-hs-2006-46-a-xlarge_web.jpeg') 50% 50% no-repeat;
+     color:#fff;
+     overflow: hidden;
+     line-height: 0;
+     font-size: 0;
+     text-align: center;
+     padding-top:125px;
+
+ }
+ .story-pix.header h1{
+     color:#fff;
+     /*border-top:1px solid #fff;*/
+     text-align: center;
+     padding: 0.5em 0 0.5em 0;
+     font-size:48px!important;
+     line-height: 1.25em;
+     background-color: rgba(0,0,0, 0.7 );
+     margin: 0;
+ }
+ .critter-outlines{
+     width: 100%;
+     max-width:1024px;
+     height: auto;
+     display: inline-block;
+     background-color: transparent!important;
+     border:none!important;
+     margin:0!important;
+     padding-bottom: 0!important;
+     box-shadow: none!important;
+ }
+
+ div.story-pix.header .horizontal-line-blend
+ {
+     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#02008e+0,ffffff+50,02008e+100&amp;0.7+0,0.7+100 */
+     background: -moz-linear-gradient(left,  rgba(2,0,142,0.7) 0%, rgba(255,255,255,0.7) 50%, rgba(2,0,142,0.7) 100%); /* FF3.6-15 */
+     background: -webkit-linear-gradient(left,  rgba(2,0,142,0.7) 0%,rgba(255,255,255,0.7) 50%,rgba(2,0,142,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
+     background: linear-gradient(to right,  rgba(2,0,142,0.7) 0%,rgba(255,255,255,0.7) 50%,rgba(2,0,142,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b302008e', endColorstr='#b302008e',GradientType=1 ); /* IE6-9 */
+     height: 1px;
+ }
+
+
+/* MAIN NAV */
+ul.disapprovers-menu
+{
+    background-color: rgba(0,0,0, 0.8);
+    text-align: center;
+    margin:0;
+    padding:0;
+    display: block;
+    clear:both;
+}
+
+
+ul.disapprovers-menu li
+{
+    list-style: none;
+    display: inline-block;
+    margin:0 1em;
+}
+
+ul.disapprovers-menu li a
+{
+    font-family: 'Viga', sans-serif!important;
+    display: inline-block;
+    padding: 0.5em!important;
+    font-size:18px!important;
+    line-height: 24px!important;
+}
+
+.active-trigger{}
+.active-section{
+
+}
+/* END MAIN NAV */
