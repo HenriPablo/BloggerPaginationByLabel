@@ -1,4 +1,5 @@
  @import url(https://fonts.googleapis.com/css?family=Viga|Pragati+Narrow:700);
+ @import url(https://fonts.googleapis.com/css?family=Abel);
 
  /* override blogger defaults */
  .header-outer
@@ -105,15 +106,86 @@ ul.disapprovers-menu li
 
 ul.disapprovers-menu li a
 {
-    font-family: 'Viga', sans-serif!important;
+    font-family: 'Abel', sans-serif!important;
     display: inline-block;
     padding: 0.5em!important;
     font-size:18px!important;
     line-height: 24px!important;
 }
-
 .active-trigger{}
 .active-section{
-
 }
 /* END MAIN NAV */
+
+/* EPISODES */
+section#episodes{
+    border:1px solid #efefef;
+}
+
+div.section-title{
+    border-bottom: 1px solid #efefef;  
+    padding: 1em;
+}
+
+div.section-title strong{
+    color:#FF9900;    
+}
+div.section-title span.sort{
+    font-size: 90%;
+    cursor: pointer;
+    margin-left:1em;
+}
+
+div.section-title span.sort.active
+{
+    border-bottom:1px solid #efefef;
+}
+
+
+
+div.section-title span.recent-first::after{
+    display: inline-block;
+    margin-left:0.5em;
+    content:" ";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 8px 0 8px;
+    border-color: #ff9900 transparent transparent transparent;
+}
+
+div.section-title span.oldest-first::after{
+    display: inline-block;
+    margin-left:0.5em;
+    content:" ";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 8px 8px 8px;
+    border-color: transparent transparent #ff9900 transparent;
+}
+
+section#episodes dl{
+    padding: 1em;
+}
+
+section#episodes dl dt{
+    border-bottom:1px solid #efefef
+}
+
+section#episodes dl dd{
+    padding-top:0.5em;
+    padding-bottom:2em;
+    padding-right: 1em;
+    font-family: "Droid Serif";
+    line-height: 1.8em;
+}
+
+ div.story-episodes .date{
+     font-family: 'Abel', sans-serif!important;
+     color:#666;
+ }
+ div.story-episodes .title{
+     font-family: 'Abel', sans-serif!important;
+ }
+/* END EPISODES */
