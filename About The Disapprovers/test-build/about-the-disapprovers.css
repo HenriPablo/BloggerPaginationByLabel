@@ -189,3 +189,36 @@ section#episodes dl dd{
      font-family: 'Abel', sans-serif!important;
  }
 /* END EPISODES */
+
+ /* ICONS */
+ .sprite {
+     background-image: url(http://4.bp.blogspot.com/-flXvpXOU4P0/VmXjsmsbIvI/AAAAAAAAETw/S2FdQ2-FvAw/s1600/amz-fb-insta-spritesheet.png.png);
+     background-repeat: no-repeat;
+     display: block;
+ }
+
+ .sprite-Amazon_Wishlist_32x117 {
+     width: 117px;
+     height: 32px;
+     background-position: -5px -5px;
+ }
+
+ .sprite-Amazon_Wishlist_365x100 {
+     width: 365px;
+     height: 100px;
+     background-position: -5px -47px;
+ }
+
+ .sprite-fb-32x32 {
+     width: 32px;
+     height: 32px;
+     background-position: -5px -157px;
+ }
+
+ .sprite-instagram-32x32 {
+     width: 32px;
+     height: 32px;
+     background-position: -5px -199px;
+ }
+
+ /* END ICONS */
