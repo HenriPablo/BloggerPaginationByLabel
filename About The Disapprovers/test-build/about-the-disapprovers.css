@@ -117,6 +117,62 @@ ul.disapprovers-menu li a
 }
 /* END MAIN NAV */
 
+
+/* ABOUT */
+section#about
+{
+    border:1px solid #efefef;
+    overflow: hidden;
+    margin-top:1em
+}
+
+section#about div.story-txt
+{
+    padding-bottom:0;
+    padding-top:0;
+    padding-left: 1em;
+    padding-right: 1em;
+    width:auto;
+}
+
+section#about .link-bar
+{
+    background-color: #f9f9f9;
+    padding: 1em;
+    border-top:1px solid #efefef;
+    overflow: hidden;
+}
+
+.link-bar a.sprite
+{
+
+    float:left;
+    margin-right:2em;
+    width:auto;
+    padding-left:42px;
+    font-family: 'Abel';
+    font-weight:bold;
+    color:#333;
+    font-size: 90%;
+    overflow: hidden;
+    display: block!important;
+
+}
+
+a.sprite-Amazon_Wishlist_32x117{
+    padding-left:120px!important;;
+    display: inline-block;
+}
+
+/* END ABOUT */
+
+/* CAST MEMBERS */
+div.story-txt h3{
+    color:#F90;
+}
+/* END CAST MEMBERS */
+
+
 /* EPISODES */
 section#episodes{
     border:1px solid #efefef;
@@ -125,6 +181,7 @@ section#episodes{
 div.section-title{
     border-bottom: 1px solid #efefef;  
     padding: 1em;
+    background-color: #F9F9F9;
 }
 
 div.section-title strong{

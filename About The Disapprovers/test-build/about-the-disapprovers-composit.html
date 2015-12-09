@@ -119,6 +119,62 @@ ul.disapprovers-menu li a
 }
 /* END MAIN NAV */
 
+
+/* ABOUT */
+section#about
+{
+    border:1px solid #efefef;
+    overflow: hidden;
+    margin-top:1em
+}
+
+section#about div.story-txt
+{
+    padding-bottom:0;
+    padding-top:0;
+    padding-left: 1em;
+    padding-right: 1em;
+    width:auto;
+}
+
+section#about .link-bar
+{
+    background-color: #f9f9f9;
+    padding: 1em;
+    border-top:1px solid #efefef;
+    overflow: hidden;
+}
+
+.link-bar a.sprite
+{
+
+    float:left;
+    margin-right:2em;
+    width:auto;
+    padding-left:42px;
+    font-family: 'Abel';
+    font-weight:bold;
+    color:#333;
+    font-size: 90%;
+    overflow: hidden;
+    display: block!important;
+
+}
+
+a.sprite-Amazon_Wishlist_32x117{
+    padding-left:120px!important;;
+    display: inline-block;
+}
+
+/* END ABOUT */
+
+/* CAST MEMBERS */
+div.story-txt h3{
+    color:#F90;
+}
+/* END CAST MEMBERS */
+
+
 /* EPISODES */
 section#episodes{
     border:1px solid #efefef;
@@ -127,6 +183,7 @@ section#episodes{
 div.section-title{
     border-bottom: 1px solid #efefef;  
     padding: 1em;
+    background-color: #F9F9F9;
 }
 
 div.section-title strong{
@@ -191,6 +248,39 @@ section#episodes dl dd{
      font-family: 'Abel', sans-serif!important;
  }
 /* END EPISODES */
+
+ /* ICONS */
+ .sprite {
+     background-image: url(http://4.bp.blogspot.com/-flXvpXOU4P0/VmXjsmsbIvI/AAAAAAAAETw/S2FdQ2-FvAw/s1600/amz-fb-insta-spritesheet.png.png);
+     background-repeat: no-repeat;
+     display: block;
+ }
+
+ .sprite-Amazon_Wishlist_32x117 {
+     width: 117px;
+     height: 32px;
+     background-position: -5px -5px;
+ }
+
+ .sprite-Amazon_Wishlist_365x100 {
+     width: 365px;
+     height: 100px;
+     background-position: -5px -47px;
+ }
+
+ .sprite-fb-32x32 {
+     width: 32px;
+     height: 32px;
+     background-position: -5px -157px;
+ }
+
+ .sprite-instagram-32x32 {
+     width: 32px;
+     height: 32px;
+     background-position: -5px -199px;
+ }
+
+ /* END ICONS */
 </style>
 
 
@@ -226,6 +316,7 @@ $(document).ready( function(){
         </div>
 
         <section id="about" class="active-section">
+            <div class="section-title">About the Disapprovers</div>
             <div class="story-txt">
                 <p>
                     Story line came to life sometime on a Saturday in May of 2015.
@@ -238,7 +329,15 @@ $(document).ready( function(){
                 <p>
                     With time, their appetite for adventure grew and the rest is history.
                 </p>
+                <p>
+                    All critters are rescues and are being taken care of by Renee Thompson.
+                    <br/>
+                    They have a <a href="http://www.facebook.com/l.php?u=http%3A%2F%2Fwww.amazon.ca%2Fregistry%2Fwishlist%2F311MNN802U8Z7&h=aAQFiuhVm">wishlist on Amazon</a> and you can follow them on <a href="//www.facebook.com/dollyalittledisabledrabbit">Facebook</a> and <a href="//instagram.com/dollyalittledisabledrabbit">Instagram</a>
+                </p>
+            </div>
 
+            <div class="link-bar">
+                <a href="http://www.facebook.com/l.php?u=http%3A%2F%2Fwww.amazon.ca%2Fregistry%2Fwishlist%2F311MNN802U8Z7&h=aAQFiuhVm" class="sprite sprite-Amazon_Wishlist_32x117">&nbsp;</a> <a href="//www.facebook.com/dollyalittledisabled" class="sprite sprite-fb-32x32">Dolly - A Little Disabled Rabbit </a> <a href="//instagram.com/dollyalittledisabledrabbit" class="sprite sprite-instagram-32x32">dollyalittledisabledrabbit</a>
             </div>
         </section>
 
@@ -246,12 +345,16 @@ $(document).ready( function(){
 
 
     <section id="cast-members">
+        <div class="section-title">Cast Members - present and past</div>
         <div class="story-row">
             <div class="story-pix">
                 <a href="http://4.bp.blogspot.com/--7Fnusj78tg/Vg5g2ee2dcI/AAAAAAAAD0c/h85aEdLkJjE/s1600/suzy-and-molly-in-bunndo_1.jpg" imageanchor="1"><img border="0" src="http://4.bp.blogspot.com/--7Fnusj78tg/Vg5g2ee2dcI/AAAAAAAAD0c/h85aEdLkJjE/s200/suzy-and-molly-in-bunndo_1.jpg"></a>
             </div>
             <div class="story-txt">
-            <h3>Molly</h3>
+                <h3>Molly</h3>
+                <p>
+                    A young, energetic and adventurous bun. Loves airplanes, astronomy and space travel. Likes to crack a joke when you least expect her. Occasionally enjoys watching and playing football.
+                </p>
             </div>
         </div>
 
