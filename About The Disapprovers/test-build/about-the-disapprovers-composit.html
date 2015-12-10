@@ -87,6 +87,7 @@
  }
 
 
+
 /* MAIN NAV */
 ul.disapprovers-menu
 {
@@ -119,8 +120,61 @@ ul.disapprovers-menu li a
 }
 /* END MAIN NAV */
 
+ /* ICONS */
+ .sprite {
+     background-image: url(http://4.bp.blogspot.com/-flXvpXOU4P0/VmXjsmsbIvI/AAAAAAAAETw/S2FdQ2-FvAw/s1600/amz-fb-insta-spritesheet.png.png);
+     background-repeat: no-repeat;
+     display: block;
+ }
 
-/* ABOUT */
+ .sprite-Amazon_Wishlist_32x117 {
+     width: 117px;
+     height: 32px;
+     background-position: -5px -5px;
+ }
+
+ .sprite-Amazon_Wishlist_365x100 {
+     width: 365px;
+     height: 100px;
+     background-position: -5px -47px;
+ }
+
+ .sprite-fb-32x32 {
+     width: 32px;
+     height: 32px;
+     background-position: -5px -157px;
+ }
+
+ .sprite-instagram-32x32 {
+     width: 32px;
+     height: 32px;
+     background-position: -5px -199px;
+ }
+
+ /* END ICONS */
+
+ /* SECTIONS */
+ .about-the-disapprovers section
+ {
+     border:1px solid #efefef;
+     margin-top: 1em;
+ }
+
+ div.section-title{
+     border-bottom: 1px solid #efefef;
+     padding: 1em;
+     background-color: #F9F9F9;
+     color:#ff9900;
+     font-weight: bold;
+ }
+
+ div.section-title strong{
+     color:#FF9900;
+ }
+
+ /* END SECTIONS */
+
+/* ABOUT SECTION */
 section#about
 {
     border:1px solid #efefef;
@@ -166,40 +220,32 @@ a.sprite-Amazon_Wishlist_32x117{
     display: inline-block;
 }
 
-/* END ABOUT */
+/* END ABOUT SECTION*/
 
-/* CAST MEMBERS */
+/* CAST MEMBERS SECTION */
+section#cast-members div.story-row
+{
+    padding-left:1em;
+    padding-top: 1em;
+}
 div.story-txt h3{
     color:#F90;
 }
-/* END CAST MEMBERS */
+/* END CAST MEMBERS SECTION  */
 
 
-/* EPISODES */
-section#episodes{
-    border:1px solid #efefef;
-}
-
-div.section-title{
-    border-bottom: 1px solid #efefef;  
-    padding: 1em;
-    background-color: #F9F9F9;
-}
-
-div.section-title strong{
-    color:#FF9900;    
-}
-div.section-title span.sort{
+/* EPISODES SECTION */
+ div.section-title span.sort{
     font-size: 90%;
     cursor: pointer;
     margin-left:1em;
+    font-weight: normal;
 }
 
 div.section-title span.sort.active
 {
     border-bottom:1px solid #efefef;
 }
-
 
 
 div.section-title span.recent-first::after{
@@ -247,40 +293,7 @@ section#episodes dl dd{
  div.story-episodes .title{
      font-family: 'Abel', sans-serif!important;
  }
-/* END EPISODES */
-
- /* ICONS */
- .sprite {
-     background-image: url(http://4.bp.blogspot.com/-flXvpXOU4P0/VmXjsmsbIvI/AAAAAAAAETw/S2FdQ2-FvAw/s1600/amz-fb-insta-spritesheet.png.png);
-     background-repeat: no-repeat;
-     display: block;
- }
-
- .sprite-Amazon_Wishlist_32x117 {
-     width: 117px;
-     height: 32px;
-     background-position: -5px -5px;
- }
-
- .sprite-Amazon_Wishlist_365x100 {
-     width: 365px;
-     height: 100px;
-     background-position: -5px -47px;
- }
-
- .sprite-fb-32x32 {
-     width: 32px;
-     height: 32px;
-     background-position: -5px -157px;
- }
-
- .sprite-instagram-32x32 {
-     width: 32px;
-     height: 32px;
-     background-position: -5px -199px;
- }
-
- /* END ICONS */
+/* END EPISODES SECTION */
 </style>
 
 
@@ -472,7 +485,45 @@ $(document).ready( function(){
         </div>
     </section>
 
-    <section id="hoomins"></section>
+    <section id="hoomins">
+        <div class="section-title">Hoomins</div>
+
+        <div class="story-row">
+            <div class="story-pix">
+                <a href="" imageanchor="1">
+                    <img border="0" src="">
+                </a>
+            </div>
+
+            <div class="story-txt">
+                <h3>Renee</h3>
+            </div>
+        </div>
+
+        <div class="story-row">
+            <div class="story-pix">
+                <a href="" imageanchor="1">
+                    <img border="0" src="">
+                </a>
+            </div>
+
+            <div class="story-txt">
+                <h3>Mrs. Angie</h3>
+            </div>
+        </div>
+
+        <div class="story-row">
+            <div class="story-pix">
+                <a href="" imageanchor="1">
+                    <img border="0" src="">
+                </a>
+            </div>
+
+            <div class="story-txt">
+                <h3>Ijon Tichy The N-th</h3>
+            </div>
+        </div>
+    </section>
 
     <section id="episodes">
         <div class="section-title"><strong>Episode Summary</strong><span id="recent-first" class="recent-first sort active">Most recent first</span> <span id="oldest-first" class="oldest-first sort">Oldest first</span></div>
