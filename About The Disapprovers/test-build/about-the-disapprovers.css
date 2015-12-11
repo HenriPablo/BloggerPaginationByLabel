@@ -1,6 +1,16 @@
  @import url(https://fonts.googleapis.com/css?family=Viga|Pragati+Narrow:700);
  @import url(https://fonts.googleapis.com/css?family=Abel);
 
+ /* BLOGGER OVERRIDES */
+ .content-outer
+ {
+     min-width: auto!important;
+     max-width: 1200px!important;
+ }
+
+
+ /* END BLOGGER OVERRIDES */
+
  /* override blogger defaults */
  .header-outer
  {
