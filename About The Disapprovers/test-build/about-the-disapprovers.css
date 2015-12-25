@@ -243,6 +243,15 @@ div.story-txt h3{
 
 
 /* EPISODES SECTION */
+
+ a strong.date{
+     font-size: 0.9em;
+ }
+ a strong.title{
+     font-size:1.35em;
+     text-transform: capitalize;
+ }
+
  div.section-title span.sort{
     font-size: 90%;
     cursor: pointer;
@@ -294,6 +303,9 @@ section#episodes dl dd{
     line-height: 1.8em;
 }
 
+ section#episodes dl dt a{
+    text-decoration:underline;
+}
  div.story-episodes .date{
      font-family: 'Abel', sans-serif!important;
      color:#666;

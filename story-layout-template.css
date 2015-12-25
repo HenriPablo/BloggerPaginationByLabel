@@ -87,12 +87,25 @@ div.story-pix a{
     padding: 0!important;
 }
 
+/* thumbnail caption */
+div.story-pix small{
+    font-size:80%;
+    font-style: italic;
+    font-family: "Trebuchet MS", Verdana, Geneva, Arial, Helvetica, sans-serif;
+    position: relative;
+    top:-20px;
+    display: block;
+    float: right;
+    clear: both;
+}
+
 div.story-pix a img
 {
     max-width: 200px!important;
     width: 100%!important;
     height: auto
 }
+
 
 div.story-footer{
     font-weight: bold;
