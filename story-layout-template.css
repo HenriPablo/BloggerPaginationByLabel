@@ -103,24 +103,47 @@ div.story-pix a{
 /* --------- thumbnail tool tip ------------ */
 div.story-row div.story-txt span.disapprover-pix-tip
 {
-    font-style: italic;
-    border-bottom:1px solid #efefef;
+    border-bottom:1px solid #999;
     position: relative;
+    
 }
+
 /* one for each character */
 .disapprover-pix-tip:after{
+    content: " ";
     display: none;
     position: absolute;
-    width:50px;
-    height: 50px;
+    top:1.1em;
+    left:0px;
+    width:70px;
+    height: 70px;
+    border-radius:70px;
+    box-shadow: 3px 3px 3px #999;
+    border:1px solid #000;
+    background-size: cover!important;
+    background-position: center!important;
+    background-repeat: no-repeat!important;
+    
 }
-.disapprover-pix-tip:after:hover{
+.disapprover-pix-tip:hover:after{
     display: block;
 }
-.disapprover-pix-tip.molly:after
-{
-    background: url('https://4.bp.blogspot.com/--7Fnusj78tg/Vg5g2ee2dcI/AAAAAAAAD0c/h85aEdLkJjE/s200/suzy-and-molly-in-bunndo_1.jpg') center no-repeat;
-}
+
+.disapprover-pix-tip.molly:after { background-image: url('//4.bp.blogspot.com/--7Fnusj78tg/Vg5g2ee2dcI/AAAAAAAAD0c/h85aEdLkJjE/s200/suzy-and-molly-in-bunndo_1.jpg'); }
+.disapprover-pix-tip.abby:after{ background-image: url('//1.bp.blogspot.com/-zBwaHqFa3e0/VjtF8F283bI/AAAAAAAAEEI/uToF7pVK4PY/s1600/abby-noming-hay.jpg'); }
+.disapprover-pix-tip.mr-toes:after{ background-image: url('//1.bp.blogspot.com/-rJ5RMJeXHeI/VkXLMtwR3PI/AAAAAAAAEH4/IYN7sb8x-1g/s1600/mr-toes-face-close-up.jpg'); }
+.disapprover-pix-tip.suzy:after{ background-image: url('//4.bp.blogspot.com/-MIs7vARdVYQ/VjtGJGCYHtI/AAAAAAAAEE4/N7WQjpUDDyg/s1600/suzy-close-uup.jpg'); }
+.disapprover-pix-tip.cleo:after{ background-image: url('//1.bp.blogspot.com/-9vSwWK_LYCg/VXRgFicfGuI/AAAAAAAACrE/VbC4kiYaNCs/s1600/binky-free-cleo_1.jpg'); }
+
+.disapprover-pix-tip.zeus:after{ background-image: url('//2.bp.blogspot.com/-M81n3uUdQRY/VjNPyzB_XDI/AAAAAAAAEB8/dSc275j8rPw/s1600/zeus.jpg'); }
+.disapprover-pix-tip.mila:after{ background-image: url('//2.bp.blogspot.com/-xGQ9Mxo-gZs/VjNPyLNFfjI/AAAAAAAAEBo/rhqSrLnddp8/s1600/mila.jpg'); }
+.disapprover-pix-tip.frankie:after{ background-image: url(''); }
+.disapprover-pix-tip.freddie:after{ background-image: url(''); }
+.disapprover-pix-tip.apollo:after{ background-image: url('//4.bp.blogspot.com/-KlnYunJml-s/VkXJpi2_bSI/AAAAAAAAEHc/hBtbfouQIvc/s1600/apollo.jpg'); }
+.disapprover-pix-tip.izzy:after{ background-image: url(''); }
+
+.disapprover-pix-tip.bruno:after{ background-image: url('//1.bp.blogspot.com/-QHXYF7PFveY/VhkNdSpg-dI/AAAAAAAAD24/C6GfWan6Nnk/s1600/bruno-looking-stern_1.jpg'); }
+
 /* --------- END thumbnail tool tip ------------ */
 
 /* ---------- thumbnail caption ------------ */
