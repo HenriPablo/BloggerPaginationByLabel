@@ -40,7 +40,18 @@ div.story-row.story-header div.story-pix a img
     font-size: 0;
 }
 
+/* ------- LAST WEEK ON DISAPPROVERS ------- */
+div.story-header div.story-last-week
+{
+    padding: 1em;
+    background-color: #efefef;
+}
 
+div.story-header div.story-last-week strong
+{
+    text-transform: uppercase;
+}
+/* ------- END LAST WEEK ON DISAPPROVERS ------- */
 
 div.story-row.story-header div.story-pix,
 div.story-row.story-header div.story-txt
@@ -53,6 +64,8 @@ div.story-row.story-header div.story-txt
 div.story-row.story-header div.story-txt{
     padding:1em 0em;
 }
+
+
 
 div.story-row.story-header div.story-txt:first-letter
 {
@@ -87,7 +100,30 @@ div.story-pix a{
     padding: 0!important;
 }
 
-/* thumbnail caption */
+/* --------- thumbnail tool tip ------------ */
+div.story-row div.story-txt span.disapprover-pix-tip
+{
+    font-style: italic;
+    border-bottom:1px solid #efefef;
+    position: relative;
+}
+/* one for each character */
+.disapprover-pix-tip:after{
+    display: none;
+    position: absolute;
+    width:50px;
+    height: 50px;
+}
+.disapprover-pix-tip:after:hover{
+    display: block;
+}
+.disapprover-pix-tip.molly:after
+{
+    background: url('https://4.bp.blogspot.com/--7Fnusj78tg/Vg5g2ee2dcI/AAAAAAAAD0c/h85aEdLkJjE/s200/suzy-and-molly-in-bunndo_1.jpg') center no-repeat;
+}
+/* --------- END thumbnail tool tip ------------ */
+
+/* ---------- thumbnail caption ------------ */
 div.story-pix small{
     font-size:80%;
     font-style: italic;
@@ -106,7 +142,7 @@ div.story-pix a img
     height: auto
 }
 
-
+/* ------------- FOOTER --------------- */
 div.story-footer{
     font-weight: bold;
     font-style: oblique;
