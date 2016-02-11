@@ -11,7 +11,7 @@ div.story-row > *
 
 div.story-row{
     clear:both;
-    overflow: hidden;
+    overflow: visible;
     padding-bottom: 1em;
     font-family: 'Droid Serif'!important;
     font-size: 125%;
@@ -83,6 +83,7 @@ div.story-txt{
     width:80%;
     padding:0 3.5em 1.75em 3.5em;
     color:#333!important;
+    overflow: visible!important;;
 }
 
 div.story-pix{
@@ -123,6 +124,7 @@ div.story-row div.story-txt span.disapprover-pix-tip
     background-size: cover!important;
     background-position: center!important;
     background-repeat: no-repeat!important;
+    z-index:10000!important;
     
 }
 .disapprover-pix-tip:hover:after{
@@ -135,8 +137,14 @@ div.story-row div.story-txt span.disapprover-pix-tip
 .disapprover-pix-tip.suzy:after{ background-image: url('//4.bp.blogspot.com/-MIs7vARdVYQ/VjtGJGCYHtI/AAAAAAAAEE4/N7WQjpUDDyg/s1600/suzy-close-uup.jpg'); }
 .disapprover-pix-tip.cleo:after{ background-image: url('//1.bp.blogspot.com/-9vSwWK_LYCg/VXRgFicfGuI/AAAAAAAACrE/VbC4kiYaNCs/s1600/binky-free-cleo_1.jpg'); }
 
-.disapprover-pix-tip.zeus:after{ background-image: url('//2.bp.blogspot.com/-M81n3uUdQRY/VjNPyzB_XDI/AAAAAAAAEB8/dSc275j8rPw/s1600/zeus.jpg'); }
-.disapprover-pix-tip.mila:after{ background-image: url('//2.bp.blogspot.com/-xGQ9Mxo-gZs/VjNPyLNFfjI/AAAAAAAAEBo/rhqSrLnddp8/s1600/mila.jpg'); }
+.disapprover-pix-tip.zeus:after{ 
+    background-image: url('//1.bp.blogspot.com/-Z2mfPTICUMs/VofNlQE4lTI/AAAAAAAAEeA/Q6wbIbT2Y3g/s200/zeus.jpg'); 
+    background-position: -50px center!important;
+}
+
+.disapprover-pix-tip.milly:after,
+.disapprover-pix-tip.mila:after
+{ background-image: url('//2.bp.blogspot.com/-xGQ9Mxo-gZs/VjNPyLNFfjI/AAAAAAAAEBo/rhqSrLnddp8/s1600/mila.jpg'); }
 .disapprover-pix-tip.frankie:after{ background-image: url('//2.bp.blogspot.com/-8WTlwh-C1ww/VmF7R5Y5NfI/AAAAAAAAESM/BL9evQqxkUE/s200/frankie.jpg'); }
 .disapprover-pix-tip.freddie:after{ background-image: url('//1.bp.blogspot.com/-jgcdDShlrT8/Vnc1UvywPfI/AAAAAAAAEZE/Dkp_53BckFE/s200/freddie-in-the-tree-small.jpg'); }
 .disapprover-pix-tip.apollo:after{ background-image: url('//4.bp.blogspot.com/-KlnYunJml-s/VkXJpi2_bSI/AAAAAAAAEHc/hBtbfouQIvc/s1600/apollo.jpg'); }
@@ -169,6 +177,7 @@ div.story-pix a img
 div.story-footer{
     font-weight: bold;
     font-style: oblique;
+    clear:both;
 }
 
 div.story-footer a{
@@ -188,10 +197,11 @@ div.story-footer a{
         padding: 0 1em 1.5em 1em;
     }
 
-    div.story-row.story-header > div.story-txt{
+    div.story-row.story-header > div.story-txt {
         font-size: 1.95em;
         line-height: 1.75em;
     }
+
 }
 /*--------------------------------------------------------------*
     END DISAPPROVERS EPISODE STYLE

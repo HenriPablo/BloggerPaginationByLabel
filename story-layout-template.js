@@ -1,17 +1,14 @@
 $(document).ready( function(){
 
     /* DISAPPROVER THUMBNAILS */
-    var disapprovers = ['Mr. Toes', 'Molly', 'Abby', 'Cleo', 'Suzy', 'Zeus', 'Frankie', 'Freddie', 'Mila', 'Izzie', 'Appolo', 'Bruno'];
-    var txt = ""
-    
+    if( $('div.story-txt').length > 0 ){
+        var disapprovers = ['Mr. Toes', 'Molly', 'Abby', 'Cleo', 'Suzy', 'Zeus', 'Frankie', 'Freddie', 'Mila', 'Milly', 'Izzie', 'Appolo', 'Bruno'];
 
-    $(disapprovers).each( function(){
-       txt = $(this).get().join("");
-        console.log(txt)
-        var re = new RegExp(txt, "g");
-        $("div.story-row:contains('"+ txt + "')").html(function(_, html) {
-            return html.replace( re, '<span class="disapprover-pix-tip ' + txt.toLowerCase() + '">' + txt + '</span>');
-});
-    });
-
+        for(var i = 0; i< disapprovers.length; i++) {
+            var re = new RegExp(disapprovers[i], "g");
+               $("div.story-txt:contains('"+ disapprovers[i] + "')").html(function(_, html) {
+                return html.replace( re, '<span class="disapprover-pix-tip ' + disapprovers[i].toLowerCase() + '">' + disapprovers[i] + '</span>');
+              });   
+        }
+    }
 });
