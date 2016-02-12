@@ -7,8 +7,8 @@ $(document).ready( function(){
         for(var i = 0; i< disapprovers.length; i++) {
             var re = new RegExp(disapprovers[i], "g");
                $("div.story-txt:contains('"+ disapprovers[i] + "')").html(function(_, html) {
-                return html.replace( re, '<span class="disapprover-pix-tip ' + disapprovers[i].toLowerCase() + '">' + disapprovers[i] + '</span>');
-              });   
+                return html.replace( re, '<span class="disapprover-pix-tip ' + disapprovers[i].toLowerCase().replace('. ', '-') + '">' + disapprovers[i] + '</span>');
+              });
         }
     }
 });

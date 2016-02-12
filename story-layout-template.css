@@ -104,9 +104,12 @@ div.story-pix a{
 /* --------- thumbnail tool tip ------------ */
 div.story-row div.story-txt span.disapprover-pix-tip
 {
-    border-bottom:1px solid #999;
+    border-bottom:1px dotted #666;
     position: relative;
-    
+}
+div.story-row div.story-txt span.disapprover-pix-tip:hover
+{
+    color: #97000e;
 }
 
 /* one for each character */
