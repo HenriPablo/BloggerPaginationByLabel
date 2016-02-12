@@ -174,6 +174,7 @@ ul.disapprovers-menu li a
      background-color: #F9F9F9;
      color:#ff9900;
      font-weight: bold;
+     margin-bottom: 1.75em;
  }
 
  div.section-title strong{
@@ -235,6 +236,18 @@ section#cast-members div.story-row
 {
     padding-left:1em;
     padding-top: 1em;
+    overflow: hidden!important;
+}
+
+section#cast-members div.story-row div.story-txt,
+section#hoomins,
+section#hoomins div.story-row div.story-txt
+{
+    overflow:hidden!important;
+}
+
+section#hoomins div.section-title{
+    margin-bottom: 1.75em;
 }
 div.story-txt h3{
     color:#F90;
@@ -243,7 +256,10 @@ div.story-txt h3{
 
 
 /* EPISODES SECTION */
-
+section#episodes{
+    overflow: hidden;
+    clear: both;
+}
  a strong.date{
      font-size: 0.9em;
  }
