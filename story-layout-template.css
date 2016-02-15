@@ -31,28 +31,7 @@ div.story-header div.story-last-week strong
     font-size:inherit!important;
 }
 
-/*
-.story-last-week > strong:nth-child(1),
-div.story-header div.story-last-week strong:first-letter{
-    font-size: inherit!important;
-}
-*/
-
-
 /* ------- END LAST WEEK ON DISAPPROVERS ------- */
-/*
-div.story-row.story-header div.story-txt:first-letter
-{
-    font-size: 50px;
-    color:#999;
-    font-weight: bold;
-    display: inline-block;
-    float: left;
-    margin: 0;
-    padding: 0 0.0em 0 0;
-}
-*/
-
 div.story-row.story-header div.story-pix a
 {
     text-align: center;
@@ -141,6 +120,12 @@ div.story-row div.story-txt span.disapprover-pix-tip:hover
     z-index:10000!important;
     
 }
+
+.hover {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+.disapprover-pix-tip.hover_effect:after,
 .disapprover-pix-tip:hover:after{
     display: block;
 }
