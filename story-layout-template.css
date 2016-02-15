@@ -103,7 +103,10 @@ div.story-row div.story-txt span.disapprover-pix-tip:hover
 }
 
 /* one for each character */
+.touched:after,
 .disapprover-pix-tip:after{
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
     content: " ";
     display: none;
     position: absolute;
@@ -120,13 +123,16 @@ div.story-row div.story-txt span.disapprover-pix-tip:hover
     z-index:10000!important;
     
 }
+/* for touch event - hide tip */
+.touched-hidden:hover:after{
+    display: none;
+}
 
-.hover {
+.touched:hover:after,
+.disapprover-pix-tip:hover:after
+{
     -webkit-user-select: none;
     -webkit-touch-callout: none;
-}
-.disapprover-pix-tip.hover_effect:after,
-.disapprover-pix-tip:hover:after{
     display: block;
 }
 
