@@ -175,6 +175,7 @@ ul.disapprovers-menu li a
      background-color: #F9F9F9;
      color:#ff9900;
      font-weight: bold;
+     margin-bottom: 1.75em;
  }
 
  div.section-title strong{
@@ -236,6 +237,18 @@ section#cast-members div.story-row
 {
     padding-left:1em;
     padding-top: 1em;
+    overflow: hidden!important;
+}
+
+section#cast-members div.story-row div.story-txt,
+section#hoomins,
+section#hoomins div.story-row div.story-txt
+{
+    overflow:hidden!important;
+}
+
+section#hoomins div.section-title{
+    margin-bottom: 1.75em;
 }
 div.story-txt h3{
     color:#F90;
@@ -244,7 +257,10 @@ div.story-txt h3{
 
 
 /* EPISODES SECTION */
-
+section#episodes{
+    overflow: hidden;
+    clear: both;
+}
  a strong.date{
      font-size: 0.9em;
  }
@@ -288,15 +304,18 @@ div.section-title span.oldest-first::after{
     border-color: transparent transparent #ff9900 transparent;
 }
 
-section#episodes dl{
+ul.story-episodes{
     padding: 1em;
+    list-style: none;
 }
 
-section#episodes dl dt{
-    border-bottom:1px solid #efefef
+
+ ul.story-episodes li > a {
+    border-bottom:1px solid #efefef;
+     text-decoration:underline;
 }
 
-section#episodes dl dd{
+ ul.story-episodes li > p {
     padding-top:0.5em;
     padding-bottom:2em;
     padding-right: 1em;
@@ -304,9 +323,6 @@ section#episodes dl dd{
     line-height: 1.8em;
 }
 
- section#episodes dl dt a{
-    text-decoration:underline;
-}
  div.story-episodes .date{
      font-family: 'Abel', sans-serif!important;
      color:#666;
@@ -326,6 +342,51 @@ $(document).ready( function(){
         $('section').not( activeSection).slideUp( "slow" );
         activeSection.slideDown( "slow" );
     });
+
+    /** SORT EPISODES */
+    var recentFirst = true;
+
+
+    function sortEpisodes() {
+        var episodes = $("ul.story-episodes");
+        var dl = $("ul.story-episodes li");
+        var sortedItems = dl.sort(function (a, b) {
+
+            //console.log($(a).data('date'));
+            //console.log( 'recentFirst: ' + recentFirst );
+            //console.log( 'd1: ' + d1 );
+            //console.log( 'd2: ' + d2 );
+
+            if (recentFirst) {
+                // console.log( 'recentFirst')
+                var d2 = new Date($(a).data('date'));
+                var d1 = new Date($(b).data('date'));
+                return d1 > d2 ? 1 : -1;
+
+            } else {
+                var d1 = new Date($(a).data('date'));
+                var d2 = new Date($(b).data('date'));
+                //console.log( 'oldestFirst')
+                //console.log( "d1 > d2: " + ( d1 > d2 ))
+                return d1 < d2 ? -1 : 1;
+            }
+        });
+
+        //console.dir( sortedItems )
+        episodes.empty();
+        episodes.append( sortedItems );
+    }
+
+    $('#recent-first').on('click', function () {
+        recentFirst = true;
+        sortEpisodes();
+    });
+
+    $('#oldest-first').on('click', function () {
+        recentFirst = false;
+        sortEpisodes();
+    });
+    /** END SORT EPISODES */
 })
 </script>
 
@@ -366,12 +427,12 @@ $(document).ready( function(){
                 <p>
                     All critters are rescues and are being taken care of by Renee Thompson.
                     <br/>
-                    They have a <a href="http://www.facebook.com/l.php?u=http%3A%2F%2Fwww.amazon.ca%2Fregistry%2Fwishlist%2F311MNN802U8Z7&h=aAQFiuhVm">wishlist on Amazon</a> and you can follow them on <a href="//www.facebook.com/dollyalittledisabledrabbit">Facebook</a> and <a href="//instagram.com/dollyalittledisabledrabbit">Instagram</a>
+                    They have a <a href="https://www.amazon.ca/registry/wishlist/311MNN802U8Z7/ref=cm_sw_r_cp_ip_wl_o_Vd1Vwb52XX2H4">wishlist on Amazon</a> and you can follow them on <a href="//www.facebook.com/dollyalittledisabledrabbit">Facebook</a> and <a href="//instagram.com/dollyalittledisabledrabbit">Instagram</a>
                 </p>
             </div>
 
             <div class="link-bar">
-                <a href="http://www.facebook.com/l.php?u=http%3A%2F%2Fwww.amazon.ca%2Fregistry%2Fwishlist%2F311MNN802U8Z7&h=aAQFiuhVm" class="sprite sprite-Amazon_Wishlist_32x117">&nbsp;</a> <a href="//www.facebook.com/dollyalittledisabled" class="sprite sprite-fb-32x32">Dolly - A Little Disabled Rabbit </a> <a href="//instagram.com/dollyalittledisabledrabbit" class="sprite sprite-instagram-32x32">dollyalittledisabledrabbit</a>
+                <a href="https://www.amazon.ca/registry/wishlist/311MNN802U8Z7/ref=cm_sw_r_cp_ip_wl_o_Vd1Vwb52XX2H4" class="sprite sprite-Amazon_Wishlist_32x117">&nbsp;</a> <a href="//www.facebook.com/dollyalittledisabled" class="sprite sprite-fb-32x32">Dolly - A Little Disabled Rabbit </a> <a href="//instagram.com/dollyalittledisabledrabbit" class="sprite sprite-instagram-32x32">dollyalittledisabledrabbit</a>
             </div>
         </section>
 
@@ -545,7 +606,6 @@ $(document).ready( function(){
             </div>
         </div>
 
-
         <div class="story-row">
             <div class="story-pix">
                 <a href="" imageanchor="1">
@@ -574,74 +634,73 @@ $(document).ready( function(){
     </section>
 
     <section id="episodes">
-        <div class="section-title"><strong>Episode Summary</strong><span id="recent-first" class="recent-first sort active">Most recent first</span> <span id="oldest-first" class="oldest-first sort">Oldest first</span></div>
-        <div class="story-episodes">
-
-            <dl>
-                <!-- TEMPLATE
-                <dt>
+        <div class="section-title"><strong>Episode Summary</strong>
+            <span id="recent-first" class="recent-first sort active">Most recent first</span>
+            <span id="oldest-first" class="oldest-first sort">Oldest first</span></div>
+            <ul class="story-episodes">
+                <!--
+                <li data-date="">
                     <a href="../">
-                        <span class="date" data-date=""></span>
+                        <span class="date"></span>
                         <strong class="title"></strong>
                     </a>
-                </dt>
-                <dd></dd>
+                    <p></p>
+                </li>
                 -->
-                <dt>
+                <li data-date="2016-02-13">
+                    <a href="..2016/02/the-disapprovers-minerals-for-thought.html">
+                        <span class="date">Feb 13 2016</span>
+                        <strong class="title">Minerals for Thought</strong>
+                    </a>
+                    <p>Mt. Toes, Molly and Zeus enter the mystery object found at the deep end of the artery. They quickly explore and traverse it to what they consider its endpoint. There, they come in contact with a strange substance and Mr. Toes is tempted to enter it.</p>
+                </li>
+                <li data-date="2016-02-06">
                     <a href="../2016/02/the-disapprovers-head-over-wheels.html">
-                        <span class="date" data-date="2016-02-06">Feb 06 2016</span>
+                        <span class="date">Feb 06 2016</span>
                         <strong class="title">Head Over Wheels</strong>
                     </a>
-                </dt>
-                <dd>After an encounter with a lynx, Zues and Milla meet with Molly and Mr. Toes. They prepare to explore a mysterious, tube like object found at the deep end of the artery.</dd>
-                <dt>
+                    <p>After an encounter with a lynx, Zues and Milla meet with Molly and Mr. Toes. They prepare to explore a mysterious, tube like object found at the deep end of the artery.</p>
+                </li>
+                <li data-date="2015-12-19">
                     <a href="../2015/12/the-disapprovers-5-minutes.html">
-                        <span class="date" data-date="2015-12-19">Dec 19 2015</span>
+                        <span class="date">Dec 19 2015</span>
                         <strong class="title">5 minutes</strong>
                     </a>
-                </dt>
-                <dd>
-                    Molly and Zeus enter the "artery" and have 5 minutes to explore it before they return to rejoin their crew mates.
-                </dd>
+                    <p>Molly and Zeus enter the "artery" and have 5 minutes to explore it before they return to rejoin their crew mates.</p>
+                </li>
 
-                <dt>
+                <li data-date="2015-12-12">
                     <a href="../2015/12/the-disapprovers-first-dive.html">
-                        <span class="date" data-date="2015-12-12">Dec 12 2015</span>
+                        <span class="date" >Dec 12 2015</span>
                         <strong class="title">First Dive</strong>
                     </a>
-                </dt>
-                <dd>The Disapprovers realize they have some time to explore the "artery" from the inside and up close. Molly and Zeus are preparing to enter the mysterious object.</dd>
+                    <p>The Disapprovers realize they have some time to explore the "artery" from the inside and up close. Molly and Zeus are preparing to enter the mysterious object.</p>
+                </li>
 
-                <dt><a href="../2015/12/the-disapprovers-round-rover.html"><span class="date" data-date="2015-12-05">Dec 05 2015</span> <strong class="title">Round Rover</strong></a></dt>
-                <dd>Trying to determin wehre the little opposum came from, Zeus and Molly drop a little, outomomous 'rover' explorere into the mysterious "loofa" tube.</dd>
+                <li data-date="2015-12-05">
+                    <a href="../2015/12/the-disapprovers-round-rover.html"><span class="date">Dec 05 2015</span> <strong class="title">Round Rover</strong></a>
+                    <p>Trying to determin wehre the little opposum came from, Zeus and Molly drop a little, outomomous 'rover' explorere into the mysterious "loofa" tube.</p>
+                </li>
 
-                <dt>
+                <li data-date="2015-11-28">
                     <a href="../2015/11/the-disapprovers-snipper.html">
-                        <span class="date" data-date="2015-11-28">Nov 28 2015</span>
+                        <span class="date" >Nov 28 2015</span>
                         <strong class="title">Snipper</strong>
                     </a>
-                </dt>
-                <dd>Zeus and Molly suspend a little probe into the mystery "loofa". Then a small opposum appear running toward the probe, decides to cut the cord the probe is suspended on and runs away.</dd>
+                    <p>Zeus and Molly suspend a little probe into the mystery "loofa". Then a small opposum appear running toward the probe, decides to cut the cord the probe is suspended on and runs away.</p>
+                </li>
 
-                <dt>
+                <!--
+                <li data-date="">
                     <a href="../">
-                        <span class="date" data-date=""></span>
+                        <span class="date"></span>
                         <strong class="title"></strong>
                     </a>
-                </dt>
-                <dd></dd>
-
-
-            </dl>
-        </div>
+                    <p></p>
+                </li>
+                -->
+            </ul>
     </section>
-
-    <!--<div class="story-footer">-->
-        <!-- - Thank you Renee!-->
-        <!--<br/>-->
-        <!--<a href="https://www.facebook.com/dollyalittledisabledrabbit?fref=ts">Follow Suzy, Molly, Abby Mr. Toes,-->
-            <!--Frankie, Freddie, Mila and Zeus on FB</a>-->
-    <!--</div>-->
 
     <p>
         Image Credit: <a href="http://hubblesite.org/gallery/album/heritage/pr2006046a/large_web/">Hubble Site,  The Antennae Galaxies/NGC 4038-4039</a>

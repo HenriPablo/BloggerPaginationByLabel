@@ -303,15 +303,18 @@ div.section-title span.oldest-first::after{
     border-color: transparent transparent #ff9900 transparent;
 }
 
-section#episodes dl{
+ul.story-episodes{
     padding: 1em;
+    list-style: none;
 }
 
-section#episodes dl dt{
-    border-bottom:1px solid #efefef
+
+ ul.story-episodes li > a {
+    border-bottom:1px solid #efefef;
+     text-decoration:underline;
 }
 
-section#episodes dl dd{
+ ul.story-episodes li > p {
     padding-top:0.5em;
     padding-bottom:2em;
     padding-right: 1em;
@@ -319,9 +322,6 @@ section#episodes dl dd{
     line-height: 1.8em;
 }
 
- section#episodes dl dt a{
-    text-decoration:underline;
-}
  div.story-episodes .date{
      font-family: 'Abel', sans-serif!important;
      color:#666;

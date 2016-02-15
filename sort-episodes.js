@@ -1,17 +1,10 @@
-$(document).ready( function(){
-    $('#disapprovers-menu li a.trigger').click( function( e ){
-        e.preventDefault();
-        var activeSection = $(  $(this).attr('href'));
-        $('section').not( activeSection).slideUp( "slow" );
-        activeSection.slideDown( "slow" );
-    });
+$(document).ready(function () {
 
-    /** SORT EPISODES */
     var recentFirst = true;
-
-
+    
+    
     function sortEpisodes() {
-        var episodes = $("ul.story-episodes");
+          var episodes = $("ul.story-episodes");    
         var dl = $("ul.story-episodes li");
         var sortedItems = dl.sort(function (a, b) {
 
@@ -19,9 +12,9 @@ $(document).ready( function(){
             //console.log( 'recentFirst: ' + recentFirst );
             //console.log( 'd1: ' + d1 );
             //console.log( 'd2: ' + d2 );
-
+            
             if (recentFirst) {
-                // console.log( 'recentFirst')
+               // console.log( 'recentFirst')
                 var d2 = new Date($(a).data('date'));
                 var d1 = new Date($(b).data('date'));
                 return d1 > d2 ? 1 : -1;
@@ -49,5 +42,7 @@ $(document).ready( function(){
         recentFirst = false;
         sortEpisodes();
     });
-    /** END SORT EPISODES */
-})
+
+
+});
+
