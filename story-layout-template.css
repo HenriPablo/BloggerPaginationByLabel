@@ -194,7 +194,17 @@ div.story-footer a{
     font-style: normal;
 }
 
+div.about-us-link{
+    font-weight: bold;
+    padding:1em;
+    background-color: #efefef;
+    font-style: normal
+}
 
+div.about-us-link a{
+    font-weight: bold;
+    padding:0;
+}
 @media screen and ( max-device-width: 640px ){
     div.story-row div.story-txt{
         font-size: 2em;
