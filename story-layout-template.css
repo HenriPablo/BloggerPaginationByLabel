@@ -142,6 +142,15 @@ div.story-row div.story-txt span.disapprover-pix-tip:hover
 .disapprover-pix-tip.suzy:after{ background-image: url('//4.bp.blogspot.com/-MIs7vARdVYQ/VjtGJGCYHtI/AAAAAAAAEE4/N7WQjpUDDyg/s1600/suzy-close-uup.jpg'); }
 .disapprover-pix-tip.cleo:after{ background-image: url('//1.bp.blogspot.com/-9vSwWK_LYCg/VXRgFicfGuI/AAAAAAAACrE/VbC4kiYaNCs/s1600/binky-free-cleo_1.jpg'); }
 
+.disapprover-pix-tip.pancake:after{ background-image: url('.jpg'); }
+.disapprover-pix-tip.ava:after{ background-image: url('.jpg'); }
+.disapprover-pix-tip.penny:after{ background-image: url('.jpg'); }
+.disapprover-pix-tip.lincoln:after{ background-image: url('.jpg'); }
+.disapprover-pix-tip.quinn:after{ background-image: url('.jpg'); }
+.disapprover-pix-tip.sammy:after{ background-image: url('.jpg'); }
+
+
+
 .disapprover-pix-tip.zeus:after{ 
     background-image: url('//1.bp.blogspot.com/-Z2mfPTICUMs/VofNlQE4lTI/AAAAAAAAEeA/Q6wbIbT2Y3g/s200/zeus.jpg'); 
     background-position: -50px center!important;

@@ -3,7 +3,27 @@ $(document).ready( function(){
     if( $('div.story-txt').length > 0 ){
 
         /* DISAPPROVER THUMBNAILS */
-        var disapprovers = ['Mr. Toes', 'Molly', 'Abby', 'Cleo', 'Suzy', 'Zeus', 'Frankie', 'Freddie', 'Mila', 'Milly', 'Izzie', 'Appolo', 'Bruno'];
+        var disapprovers = [
+            'Mr. Toes', 
+            'Molly', 
+            'Abby', 
+            'Cleo', 
+            'Suzy', 
+            'Pancake',
+            'Ava',
+            'Penny',
+            'Zeus', 
+            'Frankie', 
+            'Freddie', 
+            'Mila', 
+            'Milly', 
+            'Izzie', 
+            'Appolo',
+            'Lincoln',
+            'Quinn',
+            'Sammy',
+            'Bruno'
+        ];
 
         for(var i = 0; i< disapprovers.length; i++) {
             var re = new RegExp(disapprovers[i], "g");
@@ -41,5 +61,4 @@ $(document).ready( function(){
         });
         /* end touch events */
     }
-
 });
