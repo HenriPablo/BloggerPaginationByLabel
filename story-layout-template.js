@@ -18,7 +18,8 @@ $(document).ready( function(){
             'Mila', 
             'Milly', 
             'Izzie', 
-            'Appolo',
+            'Apollo',
+	    'Appolo', /* had a typo since I don't know how long */
             'Lincoln',
             'Quinn',
             'Sammy',
