@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css?family=Viga|Pragati+Narrow:700');
+@import url('https://fonts.googleapis.com/css?family=Abel');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+/* BLOGGER OVERRIDES */
+.content-outer
+{
+    min-width: auto!important;
+    max-width: 1200px!important;
+}
+
+/* END BLOGGER OVERRIDES */
+
+/* override blogger defaults */
+.header-outer
+{
+    display: none;
+}
+h3.post-title.entry-title{
+    display:none;
+}
+.main-inner{
+    padding-top:0!important;
+}
+
+.post-body img, .post-body .tr-caption-container{
+    padding: 0!important;
+}
+.post-header{
+    display: none;
+}
+.tabs-outer
+{
+    display:none;
+}
+/* end override blogger defaults */
+
+
+.about-the-disapprovers h1, .about-the-disapprovers h3
+{
+    /*font-family: 'Viga', sans-serif;*/
+    font-family: 'Roboto Condensed';
+    /*font-family: 'Pragati Narrow', sans-serif;*/
+    font-weight: bold;
+}
+
+.about-the-disapprovers
+{
+    width:100%;
+    max-width:1024px;
+    overflow: hidden;
+    margin:0 auto;
+    padding-top:2em;
+}
+.story-pix.header{
+    background: transparent url('http://2.bp.blogspot.com/-kO9NcPgncpQ/VlmZqUmzGnI/AAAAAAAAEPw/v2vyNWy89qE/s1600/The-Antennae-hs-2006-46-a-xlarge_web.jpeg') 50% 50% no-repeat;
+    color:#fff;
+    overflow: hidden;
+    line-height: 0;
+    font-size: 0;
+    text-align: center;
+    padding-top:125px;
+
+}
+.story-pix.header h1{
+    color:#fff;
+    /*border-top:1px solid #fff;*/
+    text-align: center;
+    padding: 0.5em 0 0.5em 0;
+    font-size:48px!important;
+    line-height: 1.25em;
+    background-color: rgba(0,0,0, 0.7 );
+    margin: 0;
+}
+.critter-outlines{
+    width: 100%;
+    max-width:1024px;
+    height: auto;
+    display: inline-block;
+    background-color: transparent!important;
+    border:none!important;
+    margin:0!important;
+    padding-bottom: 0!important;
+    box-shadow: none!important;
+}
+
+div.story-pix.header .horizontal-line-blend
+{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#02008e+0,ffffff+50,02008e+100&amp;0.7+0,0.7+100 */
+    background: -moz-linear-gradient(left,  rgba(2,0,142,0.7) 0%, rgba(255,255,255,0.7) 50%, rgba(2,0,142,0.7) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  rgba(2,0,142,0.7) 0%,rgba(255,255,255,0.7) 50%,rgba(2,0,142,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgba(2,0,142,0.7) 0%,rgba(255,255,255,0.7) 50%,rgba(2,0,142,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b302008e', endColorstr='#b302008e',GradientType=1 ); /* IE6-9 */
+    height: 1px;
+}
+
+/* MAIN NAV */
+ul.disapprovers-menu
+{
+    background-color: rgba(0,0,0, 0.8);
+    text-align: center;
+    margin:0;
+    padding:0;
+    display: block;
+    clear:both;
+}
+
+ul.disapprovers-menu li
+{
+    list-style: none;
+    display: inline-block;
+    margin:0 1em;
+}
+
+ul.disapprovers-menu li a
+{
+    font-family: 'Abel', sans-serif!important;
+    display: inline-block;
+    padding: 0.5em!important;
+    font-size:18px!important;
+    line-height: 24px!important;
+}
+.active-trigger{}
+.active-section{
+}
+/* END MAIN NAV */
+
+/* ICONS */
+.sprite {
+    background-image: url(http://4.bp.blogspot.com/-flXvpXOU4P0/VmXjsmsbIvI/AAAAAAAAETw/S2FdQ2-FvAw/s1600/amz-fb-insta-spritesheet.png.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-Amazon_Wishlist_32x117 {
+    width: 117px;
+    height: 32px;
+    background-position: -5px -5px;
+}
+
+.sprite-Amazon_Wishlist_365x100 {
+    width: 365px;
+    height: 100px;
+    background-position: -5px -47px;
+}
+
+.sprite-fb-32x32 {
+    width: 32px;
+    height: 32px;
+    background-position: -5px -157px;
+}
+
+.sprite-instagram-32x32 {
+    width: 32px;
+    height: 32px;
+    background-position: -5px -199px;
+}
+
+/* END ICONS */
+
+/* SECTIONS */
+.about-the-disapprovers section
+{
+    border:1px solid #efefef;
+    margin-top: 1em;
+}
+
+div.section-title{
+    border-bottom: 1px solid #efefef;
+    padding: 1em;
+    background-color: #F9F9F9;
+    color:#ff9900;
+    font-weight: bold;
+    margin-bottom: 1.75em;
+}
+
+div.section-title strong{
+    color:#FF9900;
+}
+
+/* END SECTIONS */
+
+/* ABOUT SECTION */
+section#about
+{
+    border:1px solid #efefef;
+    overflow: hidden;
+    margin-top:1em
+}
+
+section#about div.story-txt
+{
+    padding-bottom:0;
+    padding-top:0;
+    padding-left: 1em;
+    padding-right: 1em;
+    width:auto;
+}
+
+section#about .link-bar
+{
+    background-color: #f9f9f9;
+    padding: 1em;
+    border-top:1px solid #efefef;
+    overflow: hidden;
+}
+
+.link-bar a.sprite
+{
+
+    float:left;
+    margin-right:2em;
+    width:auto;
+    padding-left:42px;
+    font-family: 'Abel';
+    font-weight:bold;
+    color:#333;
+    font-size: 90%;
+    overflow: hidden;
+    display: block!important;
+
+}
+
+a.sprite-Amazon_Wishlist_32x117{
+    padding-left:120px!important;;
+    display: inline-block;
+}
+
+/* END ABOUT SECTION*/
+
+/* CAST MEMBERS SECTION */
+section#cast-members div.story-row
+{
+    padding-left:1em;
+    padding-top: 1em;
+    overflow: hidden!important;
+}
+
+section#cast-members div.story-row div.story-txt,
+section#hoomins,
+section#hoomins div.story-row div.story-txt
+{
+    overflow:hidden!important;
+}
+
+section#hoomins div.section-title{
+    margin-bottom: 1.75em;
+}
+div.story-txt h3{
+    color:#F90;
+}
+/* END CAST MEMBERS SECTION  */
+
+
+/* EPISODES SECTION */
+section#episodes{
+    overflow: hidden;
+    clear: both;
+}
+a strong.date{
+    font-size: 0.9em;
+}
+a strong.title{
+    font-size:1.35em;
+    text-transform: capitalize;
+}
+
+div.section-title span.sort{
+    font-size: 90%;
+    cursor: pointer;
+    margin-left:1em;
+    font-weight: normal;
+}
+
+div.section-title span.sort.active
+{
+    border-bottom:1px solid #efefef;
+}
+
+div.section-title span.recent-first::after{
+    display: inline-block;
+    margin-left:0.5em;
+    content:" ";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 8px 0 8px;
+    border-color: #ff9900 transparent transparent transparent;
+}
+
+div.section-title span.oldest-first::after{
+    display: inline-block;
+    margin-left:0.5em;
+    content:" ";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 8px 8px 8px;
+    border-color: transparent transparent #ff9900 transparent;
+}
+
+ul.story-episodes{
+    padding: 1em;
+    list-style: none;
+}
+
+
+ul.story-episodes li > a {
+    border-bottom:1px solid #efefef;
+    text-decoration:underline;
+}
+
+ul.story-episodes li > p {
+    padding-top:0.5em;
+    padding-bottom:2em;
+    padding-right: 1em;
+    font-family: "Droid Serif";
+    line-height: 1.8em;
+}
+
+div.story-episodes .date{
+    font-family: 'Abel', sans-serif!important;
+    color:#666;
+}
+div.story-episodes .title{
+    font-family: 'Abel', sans-serif!important;
+}
+/* END EPISODES SECTION */
