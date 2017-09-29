@@ -1,3 +1,8 @@
 ﻿X-Plus Bun - One With The Void - Part 2 of 3
 
 Modifying the probde was one challange, docking the tumbling vessel was anohter one. But Molly did it to joye's disappointment. We hesitated comprehending our next dicovery. that ship was completely dead. Its hard to convey the magnitude of something so non-sensical on such a scale, but tha't what we had on our paws. There was nothing to talk to through the data ports our little probe tried to use.
+Since Freddie was in general more familia with the propulsion and control system of vessels of this class, the talked us through the emergency power up of the control system. We had to load the control software from our own backup and restore system and then we had to modify it to work with the tumbling craft.
+
+In the end the scheme worked and we stabilized the craft and we docked with it. We had to, our improvised probe was too underpowered for a large scale troubleshooting. We lied to the Center and didn't tell them about the real progress we had made. As far as they knew, we were still trying to figure out how to stabilize the drifter.
+
+Trying to figure out why that ship didn't respond to any command, diagnostic or otherwise, sent us contriving all sorts of exotic explanations. Was there an outbreak of some extra terrestrial disease? Did they fly through some catastrophic gravito-magnetic anomaly? The first possibility became the most popular because of its romantic, old-timey, dramatic potential. The entire crew contracts some unknown, but deadly infection and the only way save the rest of the population from certain extinction is by incinerating the sorry souls in the solar inferno. 

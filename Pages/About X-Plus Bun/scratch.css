@@ -61,7 +61,11 @@ h3.post-title.entry-title{
     line-height: 0;
     font-size: 0;
     text-align: center;
-    padding-top:125px;
+    padding-top:0;
+    height: 450px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
 
 }
 .story-pix.header h1{
@@ -71,7 +75,7 @@ h3.post-title.entry-title{
     padding: 0.5em 0 0.5em 0;
     font-size:48px!important;
     line-height: 1.25em;
-    background-color: rgba(0,0,0, 0.7 );
+    background-color: rgba(0,0,0,0 );
     margin: 0;
 }
 .critter-outlines{
@@ -94,6 +98,7 @@ div.story-pix.header .horizontal-line-blend
     background: linear-gradient(to right,  rgba(2,0,142,0.7) 0%,rgba(255,255,255,0.7) 50%,rgba(2,0,142,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b302008e', endColorstr='#b302008e',GradientType=1 ); /* IE6-9 */
     height: 1px;
+    display: none;
 }
 
 /* MAIN NAV */
@@ -105,6 +110,22 @@ ul.disapprovers-menu
     padding:0;
     display: block;
     clear:both;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    vertical-align: middle;
+}
+
+ul.disapprovers-menu::before{
+    content: "";
+    background-color: orange;
+    background: -moz-linear-gradient(left,  rgba(2,0,142,0.7) 0%, red 50%, rgba(2,0,142,0.7) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  rgba(2,0,142,0.7) 0%,red 50%,rgba(2,0,142,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgba(2,0,142,0.7) 0%,red 50%,rgba(2,0,142,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b302008e', endColorstr='#b302008e',GradientType=1 ); /* IE6-9 */
+    height: 1px;
+    width: 100%;
+    display: block;
 }
 
 ul.disapprovers-menu li
@@ -112,16 +133,19 @@ ul.disapprovers-menu li
     list-style: none;
     display: inline-block;
     margin:0 1em;
+    vertical-align: middle;
 }
 
 ul.disapprovers-menu li a
 {
     font-family: 'Roboto Condensed', sans-serif!important;
     display: inline-block;
-    padding: 0.5em!important;
+    padding: 0.85em!important;
     font-size:20px!important;
     line-height: 24px!important;
     font-weight: bold;
+    vertical-align: middle;
+    margin-bottom: 0!important;
 }
 .active-trigger{}
 .active-section{
