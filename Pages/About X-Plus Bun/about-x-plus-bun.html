@@ -1,22 +1,681 @@
 <style>
-*{
-    padding:0;
-    margin:0;
-}
+    @import url('https://fonts.googleapis.com/css?family=Viga|Pragati+Narrow:700');
+    @import url('https://fonts.googleapis.com/css?family=Abel');
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+    /* BLOGGER OVERRIDES */
+    .main-inner .column-center-inner .section
+    {
+        margin-left:0;
+        margin-right:0;
+    }
+
+    .content-fauxcolumns + div{
+        max-width:5000px!important;
+    }
+
+    .content-outer
+    {
+        min-width: auto!important;
+        /*! max-width: 1200px!important; */
+        padding:0;
+    }
+    .content .content-outer
+    {
+        max-width: auto!important;
+        background-color:red!important;
+    }
+
+    .content-inner
+    {
+        padding: 0;
+    }
+
+    .about-the-disapprovers
+    {
+        padding-top:0!important;
+        max-width: 100%;
+    }
+
+
+
+    div.blog-feeds,
+    footer
+    {
+        display: none;
+    }
+
+
+    /* END BLOGGER OVERRIDES */
+
+    /* override blogger defaults */
+    .header-outer
+    {
+        display: none;
+    }
+    h3.post-title.entry-title{
+        display:none;
+    }
+    .main-inner{
+        padding-top:0!important;
+    }
+
+    .post-body img, .post-body .tr-caption-container{
+        padding: 0!important;
+    }
+    .post-header{
+        display: none;
+    }
+    .tabs-outer
+    {
+        display:none;
+    }
+
+    .post-footer,
+    .comments
+    {
+        max-width: 1200px;
+        margin-left:auto;
+        margin-right: auto;
+    }
+    /* end override blogger defaults */
+
+
+    .about-the-disapprovers h1, .about-the-disapprovers h3
+    {
+        /*font-family: 'Viga', sans-serif;*/
+        font-family: 'Roboto Condensed';
+        /*font-family: 'Pragati Narrow', sans-serif;*/
+        font-weight: bold;
+    }
+
+    .about-the-disapprovers
+    {
+        width:100%;
+        /*! max-width:1024px; */
+        overflow: hidden;
+        margin:0 auto;
+        padding-top:2em;
+    }
+
+    .about-the-disapprovers section
+    {
+        width:auto;
+        max-width:1200px;
+        margin-right: auto;
+        margin-left:auto;
+    }
+
+    .story-pix.header{
+        /* http://2.bp.blogspot.com/-kO9NcPgncpQ/VlmZqUmzGnI/AAAAAAAAEPw/v2vyNWy89qE/s1600/The-Antennae-hs-2006-46-a-xlarge_web.jpeg */
+        background: transparent url('https://3.bp.blogspot.com/-WMmZw0NjBEs/WMNyVPOh6VI/AAAAAAAAHSc/ozJkDvyvAQwfA8PS3IXjZrgkYXt0OzfMACLcB/s1600/00-the-bunstronauts.jpg') no-repeat;
+        background-size: 100% 100%;
+        color:#fff;
+        overflow: hidden;
+        line-height: 0;
+        font-size: 0;
+        text-align: center;
+        padding-top:0;
+        height: 450px;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+
+    }
+    .story-pix.header h1{
+        color:#fff;
+        /*border-top:1px solid #fff;*/
+        text-align: center;
+        padding: 0.5em 0 0.5em 0;
+        font-size:48px!important;
+        line-height: 1.25em;
+        background-color: rgba(0,0,0,0 );
+        margin: 0;
+    }
+    .critter-outlines{
+        width: 100%;
+        max-width:1024px;
+        height: auto;
+        display: inline-block;
+        background-color: transparent!important;
+        border:none!important;
+        margin:0!important;
+        padding-bottom: 0!important;
+        box-shadow: none!important;
+    }
+
+    div.story-pix.header .horizontal-line-blend
+    {
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#02008e+0,ffffff+50,02008e+100&amp;0.7+0,0.7+100 */
+        background: -moz-linear-gradient(left,  rgba(2,0,142,0.7) 0%, rgba(255,255,255,0.7) 50%, rgba(2,0,142,0.7) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  rgba(2,0,142,0.7) 0%,rgba(255,255,255,0.7) 50%,rgba(2,0,142,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  rgba(2,0,142,0.7) 0%,rgba(255,255,255,0.7) 50%,rgba(2,0,142,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b302008e', endColorstr='#b302008e',GradientType=1 ); /* IE6-9 */
+        height: 1px;
+        display: none;
+    }
+
+    /* MAIN NAV */
+    ul.disapprovers-menu
+    {
+        background-color: rgba(0,0,0, 0.8);
+        text-align: center;
+        margin:0;
+        padding:0;
+        display: block;
+        clear:both;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        vertical-align: middle;
+    }
+
+    ul.disapprovers-menu::before{
+        content: "";
+        background-color: orange;
+        background: -moz-linear-gradient(left,  rgba(2,0,142,0.7) 0%, red 50%, rgba(2,0,142,0.7) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  rgba(2,0,142,0.7) 0%,red 50%,rgba(2,0,142,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  rgba(2,0,142,0.7) 0%,red 50%,rgba(2,0,142,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b302008e', endColorstr='#b302008e',GradientType=1 ); /* IE6-9 */
+        height: 1px;
+        width: 100%;
+        display: block;
+    }
+
+    ul.disapprovers-menu li
+    {
+        list-style: none;
+        display: inline-block;
+        margin:0 1em;
+        vertical-align: middle;
+    }
+
+    ul.disapprovers-menu li a
+    {
+        font-family: 'Roboto Condensed', sans-serif!important;
+        display: inline-block;
+        padding: 0.85em!important;
+        font-size:20px!important;
+        line-height: 24px!important;
+        font-weight: bold;
+        vertical-align: middle;
+        margin-bottom: 0!important;
+    }
+    .active-trigger{}
+    .active-section{
+    }
+    /* END MAIN NAV */
+
+    /* ICONS */
+    .sprite {
+        background-image: url(http://4.bp.blogspot.com/-flXvpXOU4P0/VmXjsmsbIvI/AAAAAAAAETw/S2FdQ2-FvAw/s1600/amz-fb-insta-spritesheet.png.png);
+        background-repeat: no-repeat;
+        display: block;
+    }
+
+    .sprite-Amazon_Wishlist_32x117 {
+        width: 117px;
+        height: 32px;
+        background-position: -5px -5px;
+    }
+
+    .sprite-Amazon_Wishlist_365x100 {
+        width: 365px;
+        height: 100px;
+        background-position: -5px -47px;
+    }
+
+    .sprite-fb-32x32 {
+        width: 32px;
+        height: 32px;
+        background-position: -5px -157px;
+    }
+
+    .sprite-instagram-32x32 {
+        width: 32px;
+        height: 32px;
+        background-position: -5px -199px;
+    }
+
+    /* END ICONS */
+
+    /* SECTIONS */
+    .about-the-disapprovers section
+    {
+        border:1px solid #efefef;
+        margin-top: 1em;
+    }
+
+    div.section-title{
+        border-bottom: 1px solid #efefef;
+        padding: 1em;
+        background-color: #F9F9F9;
+        color:#ff9900;
+        font-weight: bold;
+        margin-bottom: 1.75em;
+    }
+
+    div.section-title strong{
+        color:#FF9900;
+    }
+
+    /* END SECTIONS */
+
+    /* ABOUT SECTION */
+    section#about
+    {
+        border:1px solid #efefef;
+        overflow: hidden;
+        margin-top:1em
+    }
+
+    section#about div.story-txt
+    {
+        padding-bottom:0;
+        padding-top:0;
+        padding-left: 1em;
+        padding-right: 1em;
+        width:auto;
+    }
+
+    section#about .link-bar
+    {
+        background-color: #f9f9f9;
+        padding: 1em;
+        border-top:1px solid #efefef;
+        overflow: hidden;
+    }
+
+    .link-bar a.sprite
+    {
+
+        float:left;
+        margin-right:2em;
+        width:auto;
+        padding-left:42px;
+        font-family: 'Abel';
+        font-weight:bold;
+        color:#333;
+        font-size: 90%;
+        overflow: hidden;
+        display: block!important;
+
+    }
+
+    a.sprite-Amazon_Wishlist_32x117{
+        padding-left:120px!important;;
+        display: inline-block;
+    }
+
+    /* END ABOUT SECTION*/
+
+    /* CAST MEMBERS SECTION */
+    section#cast-members div.story-row
+    {
+        padding-left:1em;
+        padding-top: 1em;
+        overflow: hidden!important;
+    }
+
+    section#cast-members div.story-row div.story-txt,
+    section#hoomins,
+    section#hoomins div.story-row div.story-txt
+    {
+        overflow:hidden!important;
+    }
+
+    section#hoomins div.section-title{
+        margin-bottom: 1.75em;
+    }
+    section#hoomins .story-pix a img
+    {
+
+        max-width: 60px!important;;
+    }
+    div.story-txt h3{
+        color:#F90;
+    }
+    /* END CAST MEMBERS SECTION  */
+
+
+    /* EPISODES SECTION */
+    section#episodes{
+        overflow: hidden;
+        clear: both;
+    }
+    a strong.date{
+        font-size: 0.9em;
+    }
+    a strong.title{
+        font-size:1.35em;
+        text-transform: capitalize;
+    }
+
+    div.section-title span.sort{
+        font-size: 90%;
+        cursor: pointer;
+        margin-left:1em;
+        font-weight: normal;
+    }
+
+    div.section-title span.sort.active
+    {
+        border-bottom:1px solid #efefef;
+    }
+
+    div.section-title span.recent-first::after{
+        display: inline-block;
+        margin-left:0.5em;
+        content:" ";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 8px 8px 0 8px;
+        border-color: #ff9900 transparent transparent transparent;
+    }
+
+    div.section-title span.oldest-first::after{
+        display: inline-block;
+        margin-left:0.5em;
+        content:" ";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 8px 8px 8px;
+        border-color: transparent transparent #ff9900 transparent;
+    }
+
+    ul.story-episodes{
+        padding: 1em;
+        list-style: none;
+    }
+
+
+    ul.story-episodes li > a {
+        border-bottom:1px solid #efefef;
+        text-decoration:underline;
+    }
+
+    ul.story-episodes li > p {
+        padding-top:0.5em;
+        padding-bottom:2em;
+        padding-right: 1em;
+        font-family: "Droid Serif";
+        line-height: 1.8em;
+    }
+
+    div.story-episodes .date{
+        font-family: 'Abel', sans-serif!important;
+        color:#666;
+    }
+    div.story-episodes .title{
+        font-family: 'Abel', sans-serif!important;
+    }
+    /* END EPISODES SECTION */
 </style>
+<script type="text/javascript">
+    $(document).ready( function(){
+        $('#disapprovers-menu li a.trigger').click( function( e ){
+            e.preventDefault();
+            var activeSection = $(  $(this).attr('href'));
+            $('section').not( activeSection).slideUp( "slow" );
+            activeSection.slideDown( "slow" );
+        });
 
-<script>
+        /** SORT EPISODES */
+        var recentFirst = true;
 
+
+        function sortEpisodes() {
+            var episodes = $("ul.story-episodes");
+            var dl = $("ul.story-episodes li");
+            var sortedItems = dl.sort(function (a, b) {
+
+                //console.log($(a).data('date'));
+                //console.log( 'recentFirst: ' + recentFirst );
+                //console.log( 'd1: ' + d1 );
+                //console.log( 'd2: ' + d2 );
+
+                if (recentFirst) {
+                    // console.log( 'recentFirst')
+                    var d2 = new Date($(a).data('date'));
+                    var d1 = new Date($(b).data('date'));
+                    return d1 > d2 ? 1 : -1;
+
+                } else {
+                    var d1 = new Date($(a).data('date'));
+                    var d2 = new Date($(b).data('date'));
+                    //console.log( 'oldestFirst')
+                    //console.log( "d1 > d2: " + ( d1 > d2 ))
+                    return d1 < d2 ? -1 : 1;
+                }
+            });
+
+            //console.dir( sortedItems )
+            episodes.empty();
+            episodes.append( sortedItems );
+        }
+
+        $('#recent-first').on('click', function () {
+            recentFirst = true;
+            sortEpisodes();
+        });
+
+        $('#oldest-first').on('click', function () {
+            recentFirst = false;
+            sortEpisodes();
+        });
+        /** END SORT EPISODES */
+    })
 </script>
 
-<div class="heder">
-    <h1>Stay tunned, we're working on this :-)</h1>
-</div>
 
-<div>
 
-</div>
+<div class="about-the-disapprovers">
+    <div class="story-row story-header">
 
-<div class="footer">
-    <h5>Footer placeholder</h5>
+        <div class="story-pix header">
+            <!--
+            <img class="critter-outlines" src="http://2.bp.blogspot.com/-shWmHQWikE4/VlsXR0HXR6I/AAAAAAAAEQY/1npAmEdVMgY/s1600/about-the-disapprovers-header-OUTLINES-ONLY.png"/>
+            -->
+            <div class="horizontal-line-blend"></div>
+            <h1>X-Plus Bun</h1>
+            <div class="horizontal-line-blend"></div>
+
+            <ul class="disapprovers-menu" id="disapprovers-menu">
+                <li><a href="#about" class="trigger ative-trigger">About</a></li>
+                <li><a href="#cast-members" class="trigger">Cast Members</a></li>
+                <li><a href="#hoomins" class="trigger">Hoomins</a></li>
+                <li><a href="#episodes" class="trigger">Episodes</a></li>
+                <li><a href="../">Home</a></li>
+            </ul>
+        </div>
+
+        <section id="about" class="active-section">
+            <div class="section-title">About X-Plus Bun</div>
+            <div class="story-txt">
+                <p>
+                    A series of short stories chronicling the exploits in space by rabbits and their friends.
+                </p>
+            </div>
+        </section>
+
+    </div>
+
+
+    <section id="cast-members">
+        <div class="section-title">Cast Members - present and past</div>
+        <div class="story-row">
+            <div class="story-pix">
+                <a href="http://4.bp.blogspot.com/--7Fnusj78tg/Vg5g2ee2dcI/AAAAAAAAD0c/h85aEdLkJjE/s1600/suzy-and-molly-in-bunndo_1.jpg" imageanchor="1"><img border="0" src="http://4.bp.blogspot.com/--7Fnusj78tg/Vg5g2ee2dcI/AAAAAAAAD0c/h85aEdLkJjE/s200/suzy-and-molly-in-bunndo_1.jpg"></a>
+            </div>
+            <div class="story-txt">
+                <h3>Molly</h3>
+                <p>
+                    A young, energetic and adventurous bun. Loves airplanes, astronomy and space travel. Likes to crack a joke when you least expect her. Occasionally enjoys watching and playing football.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="story-row">
+            <div class="story-pix">
+                <a href="http://1.bp.blogspot.com/-rJ5RMJeXHeI/VkXLMtwR3PI/AAAAAAAAEH4/IYN7sb8x-1g/s1600/mr-toes-face-close-up.jpg" imageanchor="1"><img border="0" src="http://1.bp.blogspot.com/-rJ5RMJeXHeI/VkXLMtwR3PI/AAAAAAAAEH4/IYN7sb8x-1g/s200/mr-toes-face-close-up.jpg"></a>
+            </div>
+
+            <div class="story-txt">
+                <h3>Mr. Toes</h3>
+                <p>Veteran of the group and "in relationship" with Abby. Sometimes, Mr. Toes gets called "Major Toes" in reference to David Bowie's "Major Tom". Mr. Toes dreamed all his life of becoming a bunstronaut. </p>
+            </div>
+        </div>
+
+        <div class="story-row">
+
+            <div class="story-pix">
+                <a href="http://1.bp.blogspot.com/-zBwaHqFa3e0/VjtF8F283bI/AAAAAAAAEEI/uToF7pVK4PY/s1600/abby-noming-hay.jpg" imageanchor="1"><img border="0" src="http://1.bp.blogspot.com/-zBwaHqFa3e0/VjtF8F283bI/AAAAAAAAEEI/uToF7pVK4PY/s200/abby-noming-hay.jpg"></a>
+            </div>
+
+            <div class="story-txt">
+                <h3>Abby</h3>
+                <p>
+                    Bunneh "mission specialist".
+                </p>
+
+            </div>
+        </div>
+
+        <div class="story-row">
+            <div class="story-pix">
+                <a href="http://1.bp.blogspot.com/-jgcdDShlrT8/Vnc1UvywPfI/AAAAAAAAEZE/Dkp_53BckFE/s1600/freddie-in-the-tree-small.jpg" imageanchor="1" ><img border="0" src="http://1.bp.blogspot.com/-jgcdDShlrT8/Vnc1UvywPfI/AAAAAAAAEZE/Dkp_53BckFE/s200/freddie-in-the-tree-small.jpg" /></a>
+            </div>
+            <div class="story-txt">
+                <h3>Freddie</h3>
+                <p>Ratty friend and adventure control specialist. Often acting as copcom ("capsule communicator").
+                    Monitors the expedition members' vital signs, provides relevant info about the movements and activities of hoomins.
+                    Monitors all misssion critical systems. </p>
+            </div>
+        </div>
+
+
+
+        <div class="story-row">
+            <div class="story-pix">
+                <a href="https://4.bp.blogspot.com/-kgXZ0YnAVes/V3V5N0Tt6RI/AAAAAAAAFr0/2jowwQHy2hIgdLkZG3zRZS5Tg-vFglqxQCLcB/s1600/ava-thumb.jpg" imageanchor="1" >
+                    <img border="0" src="https://4.bp.blogspot.com/-kgXZ0YnAVes/V3V5N0Tt6RI/AAAAAAAAFr0/2jowwQHy2hIgdLkZG3zRZS5Tg-vFglqxQCLcB/s1600/ava-thumb.jpg" />
+                </a>
+            </div>
+            <div class="story-txt">
+                <h3>Ava</h3>
+                <p>Rescuee from the lab bust.</p>
+            </div>
+        </div>
+
+        <div class="story-row">
+            <div class="story-pix">
+                <a href="https://3.bp.blogspot.com/-3nXtphCJh1k/V3V5OEMCKLI/AAAAAAAAFsA/IDH_DjfzwhUn-K50W8Ir_1hD6YUUhWfmQCLcB/s1600/penny-thumb.jpg" imageanchor="1" >
+                    <img border="0" src="https://3.bp.blogspot.com/-3nXtphCJh1k/V3V5OEMCKLI/AAAAAAAAFsA/IDH_DjfzwhUn-K50W8Ir_1hD6YUUhWfmQCLcB/s1600/penny-thumb.jpg" />
+                </a>
+            </div>
+            <div class="story-txt">
+                <h3>Penny</h3>
+                <p>Rescuee from the lab bust.</p>
+            </div>
+        </div>
+
+        <div class="story-row">
+            <div class="story-pix">
+                <a href="https://1.bp.blogspot.com/-fAv6IYJ_JEU/V3V5N9j2zVI/AAAAAAAAFr4/UQ8FGFfH_SQG-YfjT4Cf16oFCuUTtI_0QCLcB/s1600/pancake-thumb.jpg" imageanchor="1" >
+                    <img border="0" src="https://1.bp.blogspot.com/-fAv6IYJ_JEU/V3V5N9j2zVI/AAAAAAAAFr4/UQ8FGFfH_SQG-YfjT4Cf16oFCuUTtI_0QCLcB/s1600/pancake-thumb.jpg" />
+                </a>
+            </div>
+            <div class="story-txt">
+                <h3>Pancake</h3>
+                <p>Adventurist, artist, likes metal working and takes well to mechanical engineering.</p>
+            </div>
+        </div>
+
+
+        <!--
+        <div class="story-row">
+            <div class="story-pix">
+            </div>
+            <div class="story-txt">
+                <h3></h3>
+            </div>
+        </div>
+        -->
+
+
+    </section> <!-- END CAST MEMBERS -->
+
+    <section id="hoomins">
+        <div class="section-title">Hoomins</div>
+
+        <div class="story-row">
+            <div class="story-pix">
+                <a href="" imageanchor="1">
+                    <img border="0" src="https://1.bp.blogspot.com/-PhhA_dJR_Ms/VrolPxgZn8I/AAAAAAAAEwQ/5_56dC-0G4s/s200/user-female-alt-icon.png"/>
+                </a>
+            </div>
+
+            <div class="story-txt">
+                <h3>Renee</h3>
+                <p>Taking care of bunneh, ratties and cat appearing in the story, photography</p>
+            </div>
+        </div>
+
+        <div class="story-row">
+            <div class="story-pix">
+                <a href="" imageanchor="1">
+                    <img border="0" src="https://4.bp.blogspot.com/-viDM9JXhRxI/VrolP9FASRI/AAAAAAAAEwU/X9R_yUVtcQk/s200/user-female-icon.png"/>
+                </a>
+            </div>
+
+            <div class="story-txt">
+                <h3>Mrs. Angie</h3>
+                <p>Story editing, taking care of and catering to Mr. Bun</p>
+            </div>
+        </div>
+
+        <div class="story-row">
+            <div class="story-pix">
+                <a href="" imageanchor="1">
+                    <img border="0" src="https://4.bp.blogspot.com/-sbE9x3YQDNY/VrolP_YPHhI/AAAAAAAAEwM/t1Adj9TXQ7Q/s200/user-male-icon.png"/>
+                </a>
+            </div>
+
+            <div class="story-txt">
+                <h3>Ijon Tichy The N-th</h3>
+                <p>Story, site maintenance, taking care of and catering to Mr. Bun</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="episodes">
+
+        <div class="section-title"><strong>Episode Summary</strong>
+            <span id="recent-first" class="recent-first sort active">Most recent first</span>
+            <span id="oldest-first" class="oldest-first sort">Oldest first</span>
+        </div>
+
+        <ul class="story-episodes">
+
+            <li data-date="2017-09-02">
+                <a href="http://www.disapprovingbun.com/2017/09/x-plus-bun-improbabilistic-sim.html">
+                    <span class="date">September 2, 2017</span>
+                    <strong class="title">X-Plus Bun - The Improbabilistic Sim</strong>
+                </a>
+                <p>Mr. Toes has a nightmare about flying and landing a space vehicle without being able to stop
+                    on a long runway. Him and Abby fly off the end of the runway and fall off a cliff into a an ocean.</p>
+            </li>
+
+        </ul>
+
+    </section>
+
+    <section id="credits">
+        <p>
+            Image Credit: <a href="http://hubblesite.org/gallery/album/heritage/pr2006046a/large_web/">Hubble Site,  The Antennae Galaxies/NGC 4038-4039</a>
+        </p>
+    </section>
 </div>
