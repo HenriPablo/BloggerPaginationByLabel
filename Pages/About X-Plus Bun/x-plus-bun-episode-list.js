@@ -2,6 +2,11 @@
  *
  * @type {[null,null]}
  *
+ *  "d" - date episode was published
+ *  "u" - url of episode
+ *  "t" - title of episode
+ *  "p" - paragraph with short description of episode
+ *
  */
 
 var xPlusBunEpisodes =
