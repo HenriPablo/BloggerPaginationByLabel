@@ -12,6 +12,12 @@
 var xPlusBunEpisodes =
     [
         {
+            "d" : "2017-12-30",
+            "u" : "http://www.disapprovingbun.com/2017/12/x-plus-bun-red-hop-pt-8.html",
+            "t" : "X-Plus Bun - Red Hop, Pt. 8",
+            "p" : ""
+        },
+        {
             "d" : "2017-12-23",
             "u" : "http://www.disapprovingbun.com/2017/12/x-plus-bun-red-hop-pt-7.html",
             "t" : "X-Plus Bun - Red Hop, Pt. 7",
@@ -84,15 +90,15 @@ var xPlusBunEpisodes =
             "p" : "Mr. Toes has a nightmare about flying and landing a space vehicle without being able to stop on a long runway. Him and Abby fly off the end of the runway and fall off a cliff into a an ocean."
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2017-08-12",
+            "u" : "http://www.disapprovingbun.com/2017/08/x-plus-bun-x-ray-array.html",
+            "t" : "X-Plus Bun - The X-Ray Array",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2017-08-05",
+            "u" : "http://www.disapprovingbun.com/2017/08/x-plus-bun-copper-cardinal.html",
+            "t" : "X-Plus Bun - The Copper Cardinal",
             "p" : ""
         },
         {
