@@ -324,9 +324,9 @@ var xPlusBunEpisodes =
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2016-09-24",
+            "u" : "http://www.disapprovingbun.com/2016/09/x-plus-bun.html",
+            "t" : "X Plus Bun - The Delivery",
             "p" : ""
         }
     ];
