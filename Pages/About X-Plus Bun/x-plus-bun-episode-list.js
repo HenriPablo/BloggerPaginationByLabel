@@ -12,6 +12,12 @@
 var xPlusBunEpisodes =
     [
         {
+            "d" : "2018-01-06",
+            "u" : "http://www.disapprovingbun.com/2018/01/x-plus-bun-red-hop-pt-9.html",
+            "t" : "X-Plus Bun - Red Hop, Pt. 9",
+            "p" : ""
+        },
+        {
             "d" : "2017-12-30",
             "u" : "http://www.disapprovingbun.com/2017/12/x-plus-bun-red-hop-pt-8.html",
             "t" : "X-Plus Bun - Red Hop, Pt. 8",
@@ -102,9 +108,15 @@ var xPlusBunEpisodes =
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2017-07-29",
+            "u" : "http://www.disapprovingbun.com/2017/07/x-plus-bun-underwater-space-drill.html",
+            "t" : "X-Plus Bun - The Underwater Space Drill",
+            "p" : ""
+        },
+        {
+            "d" : "2017-07-22",
+            "u" : "http://www.disapprovingbun.com/2017/07/x-plus-bun-bunstronaut-painters.html",
+            "t" : "X-Plus Bun, The Bunstronaut Painters",
             "p" : ""
         },
         {
@@ -282,45 +294,39 @@ var xPlusBunEpisodes =
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2016-11-12",
+            "u" : "http://www.disapprovingbun.com/2016/11/x-plus-bun-sleepy-capsule.html",
+            "t" : "X Plus Bun - Sleepy Capsule",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2016-11-05",
+            "u" : "http://www.disapprovingbun.com/2016/11/x-plus-bun-carrot-peeler.html",
+            "t" : "X Plus Bun - The Carrot Peeler",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2016-10-29",
+            "u" : "http://www.disapprovingbun.com/2016/10/x-plus-bun-space-convertible.html",
+            "t" : "X Plus Bun - Space Convertible",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2016-10-15",
+            "u" : "http://www.disapprovingbun.com/2016/10/x-plus-bun-nutriberry-pie.html",
+            "t" : "X Plus Bun - The Nutriberry Pie",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2016-10-08",
+            "u" : "http://www.disapprovingbun.com/2016/10/x-plus-bun-born-again-pilot.html",
+            "t" : "X Plus Bun - The Born Again Pilot",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
-            "p" : ""
-        },
-        {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2016-10-01",
+            "u" : "http://www.disapprovingbun.com/2016/10/x-plus-bun-right-wrong-button.html",
+            "t" : "X Plus Bun - The Right Wrong Button",
             "p" : ""
         },
         {
