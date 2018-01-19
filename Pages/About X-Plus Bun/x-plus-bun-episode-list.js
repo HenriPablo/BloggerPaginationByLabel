@@ -11,6 +11,24 @@
 
 var xPlusBunEpisodes =
     [
+        /*{
+            "d" : "",
+            "u" : "",
+            "t" : "",
+            "p" : ""
+        },*/
+        {
+            "d" : "2018-01-20",
+            "u" : "http://www.disapprovingbun.com/2018/01/x-plus-bun-red-hop-pt-11.html",
+            "t" : "X-Plus Bun - Red Hop, Pt. 11",
+            "p" : ""
+        },
+        {
+            "d" : "2018-01-13",
+            "u" : "http://www.disapprovingbun.com/2018/01/x-plus-bun-red-hop-pt-10.html",
+            "t" : "X-Plus Bun - Red Hop, Pt. 10",
+            "p" : ""
+        },
         {
             "d" : "2018-01-06",
             "u" : "http://www.disapprovingbun.com/2018/01/x-plus-bun-red-hop-pt-9.html",
@@ -120,177 +138,171 @@ var xPlusBunEpisodes =
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2017-07-15",
+            "u" : "http://www.disapprovingbun.com/2017/07/x-plus-bun-retrofire-pt-27-epilogue.html",
+            "t" : "X-Plus Bun - Retrofire, Pt. 27 - Epilogue",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2017-07-01",
+            "u" : "http://www.disapprovingbun.com/2017/07/x-plus-bun-retrofire-pt-26.html",
+            "t" : "X-Plus Bun - Retrofire, Pt. 26",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2017-06-24",
+            "u" : "http://www.disapprovingbun.com/2017/06/x-plus-bun-retrofire-pt-25.html",
+            "t" : "X-Plus Bun - Retrofire, Pt. 25",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2017-06-17",
+            "u" : "http://www.disapprovingbun.com/2017/06/x-plus-bun-retrofire-pt-24.html",
+            "t" : "X-Plus Bun - Retrofire, Pt. 24",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2017-06-10",
+            "u" : "http://www.disapprovingbun.com/2017/06/x-plus-bun-retrofire-pt-23.html",
+            "t" : "X-Plus Bun - Retrofire, Pt. 23",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2017-05-27",
+            "u" : "http://www.disapprovingbun.com/2017/05/x-plus-bun-retrofire-pt-22.html",
+            "t" : "X-Plus Bun - Retrofire, Pt. 22",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2017-05-13",
+            "u" : "http://www.disapprovingbun.com/2017/05/x-plus-bun-bunfiction-update.html",
+            "t" : "X-Plus Bun - Retrofire, Pt. 21",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2017-05-06",
+            "u" : "http://www.disapprovingbun.com/2017/05/x-plus-bun-retrofire-pt-20.html",
+            "t" : "X-Plus Bun - Retrofire, Pt. 20",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2017-04-29",
+            "u" : "http://www.disapprovingbun.com/2017/04/x-plus-bun-retrofire-pt-19.html",
+            "t" : "X-Plus Bun - Retrofire, Pt. 19",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2017-04-22",
+            "u" : "http://www.disapprovingbun.com/2017/04/x-plus-bun-retrofire-pt-18.html",
+            "t" : "X-Plus Bun - Retrofire, Pt. 18",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2017-04-15",
+            "u" : "http://www.disapprovingbun.com/2017/04/x-plus-bun-retrofire-pt-17.html",
+            "t" : "X-Plus Bun - Retrofire, Pt. 17",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2017-04-08",
+            "u" : "http://www.disapprovingbun.com/2017/04/x-plus-bun-retrofire-pt-16.html",
+            "t" : "X-Plus Bun - Retrofire, Pt. 16",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2017-03-25",
+            "u" : "http://www.disapprovingbun.com/2017/03/x-plus-bun-retrofire-pt-15.html",
+            "t" : "X-Plus Bun - Retrofire, Pt. 15",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2017-03-18",
+            "u" : "http://www.disapprovingbun.com/2017/03/x-plus-bun-retrofire-pt-14.html",
+            "t" : "X-Plus Bun - Retrofire, Pt. 14",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2017-03-11",
+            "u" : "http://www.disapprovingbun.com/2017/03/x-plus-bun-retrofire-pt-13.html",
+            "t" : "X-Plus Bun - Retrofire, Pt. 13",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2017-03-04",
+            "u" : "http://www.disapprovingbun.com/2017/03/x-plus-bun-retrofire-pt-12.html",
+            "t" : "X-Plus Bun - Retrofire, Pt. 12",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2017-02-18",
+            "u" : "http://www.disapprovingbun.com/2017/02/x-plus-bun-retrofire-pt-11.html",
+            "t" : "X-Plus Bun - Retrofire, Pt. 11",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2017-02-11",
+            "u" : "http://www.disapprovingbun.com/2017/02/x-plus-bun-retrofire-pt-10.html",
+            "t" : "X-Plus Bun - Retrofire, Pt. 10",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2017-02-04",
+            "u" : "http://www.disapprovingbun.com/2017/02/x-plus-bun-retrofire-pt-9.html",
+            "t" : "X-Plus Bun - Retrofire, Pt. 9",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2017-01-21",
+            "u" : "http://www.disapprovingbun.com/2017/01/x-plus-bun-retrofire-pt-8.html",
+            "t" : "X Plus Bun - Retrofire, Pt. 8",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2017-01-14",
+            "u" : "http://www.disapprovingbun.com/2017/01/x-plus-bun-retrofire-pt-7.html",
+            "t" : "X Plus Bun - Retrofire, Pt. 7",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2017-01-07",
+            "u" : "http://www.disapprovingbun.com/2017/01/x-plus-bun-retrofire-pt-6.html",
+            "t" : "X Plus Bun - Retrofire, Pt. 6",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2016-12-31",
+            "u" : "http://www.disapprovingbun.com/2016/12/x-plus-bun-retrofire-pt-5.html",
+            "t" : "X Plus Bun - Retrofire, Pt. 5",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2016-12-24",
+            "u" : "http://www.disapprovingbun.com/2016/12/x-plus-bun-retrofire-pt-4.html",
+            "t" : "X Plus Bun - Retrofire, Pt. 4",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2016-12-17",
+            "u" : "http://www.disapprovingbun.com/2016/12/x-plus-bun-retrofire-pt-3.html",
+            "t" : "X-Plus Bun: Retrofire, Pt. 3",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2016-12-11",
+            "u" : "http://www.disapprovingbun.com/2016/12/gods-speed-john-glenn-from-all.html",
+            "t" : "God's Speed, John Glenn, from all the bunstronauts.",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2016-12-03",
+            "u" : "http://www.disapprovingbun.com/2016/12/x-plus-bun-retrofire-pt-2.html",
+            "t" : "X Plus Bun - Retrofire, Pt. 2",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
-            "p" : ""
-        },
-        {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2016-11-26",
+            "u" : "http://www.disapprovingbun.com/2016/11/x-plus-bun-retrofire-pt-1.html",
+            "t" : "X Plus Bun - The Retrofire, Pt. 1",
             "p" : ""
         },
         {
