@@ -11,63 +11,45 @@
 
 var xPlusBunEpisodes =
     [
-        /*
-        {
-            "d" : "",
-            "u" : "",
-            "t" : "",
-            "p" : ""
-        },
+
 
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2018-06-24",
+            "u" : "http://www.disapprovingbun.com/2018/06/x-plus-bun-red-hop-pt-27.html",
+            "t" : "X-Plus Bun - Red Hop, Pt. 27",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2018-06-10",
+            "u" : "http://www.disapprovingbun.com/2018/06/x-plus-bun-red-hop-pt-26.html",
+            "t" : "X-Plus Bun - Red Hop, pt. 26",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2018-05-27",
+            "u" : "http://www.disapprovingbun.com/2018/05/x-plus-bun-red-hop-pt-25.html",
+            "t" : "X-Plus Bun - Red Hop, Pt. 25",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
+            "d" : "2018-05-20",
+            "u" : "http://www.disapprovingbun.com/2018/05/x-plus-bun-red-hop-pt-24.html",
+            "t" : "X-Plus Bun - Red Hop, Pt. 24",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
-            "t" : "",
-            "p" : ""
-        },
-        {
-            "d" : "",
-            "u" : "",
-            "t" : "",
-            "p" : ""
-        },
-        {
-            "d" : "",
-            "u" : "",
+            "d" : "2018-05-13",
+            "u" : "http://www.disapprovingbun.com/2018/05/x-plus-bun-red-hop-pt-23.html",
             "t" : "X-Plus Bun - Red Hop, Pt. 23",
             "p" : ""
         },
         {
-            "d" : "",
-            "u" : "",
+            "d" : "2018-04-29",
+            "u" : "http://www.disapprovingbun.com/2018/04/x-plus-bun-red-hop-pt-22.html",
             "t" : "X-Plus Bun - Red Hop, Pt. 22",
             "p" : ""
         },
-        */
+
         {
             "d" : "2018-04-22",
             "u" : "https://www.disapprovingbun.com/2018/04/x-plus-bun-red-hop-pt-21.html",
